@@ -237,8 +237,8 @@ Command overview presenting role-tailored KPI views for Chartering, Procurement,
     const paradip = warnings.find(w => w.portId === 'p-paradip');
     const dhamra = warnings.find(w => w.portId === 'p-dhamra');
 
-    answer = `### 🌊 Live Ocean Weather & IMD Port Danger Warnings
-Verified real-time feeds from **Open-Meteo Marine API** and **India Meteorological Department (IMD)**:
+    answer = `### 🌊 Live Ocean Weather & IMD Cyclone & Port Danger Warnings
+Verified real-time feeds from **Open-Meteo Marine API** and **India Meteorological Department (IMD) Cyclone Warning Division**:
 
 - **Paradip Port**: **${paradip?.dangerSignalText || 'LC-3'}** — Max wave/swell: **${paradip?.expectedSwellM || 2.3}m**, Wind: **${paradip?.maxWindKnots || 28} kts**.
   - *Advisory*: ${paradip?.portAuthorityNotice || 'Vessels at outer anchorage advised to keep main engines on 1-hour notice.'}

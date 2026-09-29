@@ -362,7 +362,7 @@ const TopHeader: React.FC<TopHeaderProps> = ({
 
   return (
     <>
-      <header className="h-14 flex items-center justify-between px-2 sm:px-3 lg:px-4 enterprise-header bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 flex-shrink-0 z-30 sticky top-0 transition-colors relative w-full max-w-full overflow-x-hidden">
+      <header className="h-14 flex items-center justify-between px-2 sm:px-3 lg:px-4 enterprise-header bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex-shrink-0 z-50 sticky top-0 transition-colors relative w-full overflow-visible">
         <div className="flex items-center justify-between w-full min-w-0 gap-1.5 sm:gap-2">
           {/* Left Section: National Identity Emblem & Live Telemetry */}
           <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0 min-w-0">
@@ -569,12 +569,12 @@ const TopHeader: React.FC<TopHeaderProps> = ({
               <>
                 {/* Backdrop to close on outside click */}
                 <div
-                  className={cn("fixed inset-0 z-40 bg-transparent", profileBackdropClass)}
+                  className={cn("fixed inset-0 z-[60] bg-transparent", profileBackdropClass)}
                   onClick={() => setShowProfile(false)}
                   aria-hidden="true"
                 />
                 <div
-                  className={cn("absolute right-0 top-full mt-1.5 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl z-50 py-1 divide-y divide-slate-100 dark:divide-slate-800 origin-top-right", profileAnimClass)}
+                  className={cn("absolute right-0 top-full mt-1.5 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl z-[70] py-1 divide-y divide-slate-100 dark:divide-slate-800 origin-top-right", profileAnimClass)}
                   onClick={(e) => e.stopPropagation()}
                 >
                   <div className="px-3.5 py-2.5">

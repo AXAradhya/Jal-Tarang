@@ -270,14 +270,14 @@ export const NotificationCenter: React.FC<NotificationCenterProps> = ({
     <>
       {/* Click outside to close backdrop without darkening the header bar */}
       <div
-        className={cn("fixed inset-0 z-40 bg-transparent", backdropClass)}
+        className={cn("fixed inset-0 z-[60] bg-transparent", backdropClass)}
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Top Dropdown Popover Container: 100% Solid Opaque Background with Fluid Spring Animation */}
       <div
-        className={cn("fixed inset-x-2 top-16 sm:absolute sm:inset-auto sm:right-0 sm:top-full sm:mt-2 w-auto sm:w-[460px] md:w-[480px] max-w-[96vw] h-[580px] max-h-[82vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl z-50 flex flex-col overflow-hidden text-slate-900 dark:text-slate-100 origin-top-right", animClass)}
+        className={cn("fixed inset-x-2 top-16 sm:absolute sm:inset-auto sm:right-0 sm:top-full sm:mt-2 w-auto sm:w-[460px] md:w-[480px] max-w-[96vw] h-[580px] max-h-[82vh] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl z-[70] flex flex-col overflow-hidden text-slate-900 dark:text-slate-100 origin-top-right", animClass)}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

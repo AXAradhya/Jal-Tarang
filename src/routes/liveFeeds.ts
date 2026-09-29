@@ -22,6 +22,7 @@ import {
   UnComtradeService,
   ImdCycloneService,
   MarineCadastreService,
+  AisStreamService,
   EAST_COAST_PORTS,
 } from '../services/ingestion/index.js';
 import { pool } from '../db/index.js';
@@ -163,6 +164,7 @@ router.get('/status', async (_req: Request, res: Response) => {
           ? 'Live real-time commercial vessel AIS positions, MMSI, SOG, heading, and draught across Bay of Bengal.'
           : 'Verified commercial vessel AIS positions, MMSI, SOG, heading, and draught across Bay of Bengal from NOAA/MarineCadastre dataset.',
         lastSync: now.toISOString(),
+        liveStreaming: AisStreamService.getInstance().getStreamingStatus(),
       },
       {
         id: 'openmeteo',

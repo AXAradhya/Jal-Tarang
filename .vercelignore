@@ -1,0 +1,17 @@
+# Vercel Ignore File — JAL TARANG
+# Ignore Python ML service, backend prototype, and heavy test files to prevent Vercel from downloading Python wheels
+ml-service/
+backend/
+requirements.txt
+alembic.ini
+*.py
+data.rar
+check_10438.js
+check_ports.js
+find_10709.js
+tests/
+.agents/
+.cursor/
+.docs/
+.system_generated/
+scripts/

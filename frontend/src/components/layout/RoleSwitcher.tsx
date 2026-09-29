@@ -55,12 +55,12 @@ export const RoleSwitcher: React.FC = () => {
         <>
           {/* Backdrop to close on outside click */}
           <div
-            className="fixed inset-0 z-40 bg-transparent"
+            className="fixed inset-0 z-[60] bg-transparent"
             onClick={() => setIsOpen(false)}
             aria-hidden="true"
           />
           <div
-            className="absolute right-0 top-full mt-1.5 w-60 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl z-50 py-1 divide-y divide-slate-100 dark:divide-slate-800 animate-in fade-in zoom-in-95 duration-150"
+            className="absolute right-0 top-full mt-1.5 w-60 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-2xl z-[70] py-1 divide-y divide-slate-100 dark:divide-slate-800 animate-in fade-in zoom-in-95 duration-150"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="px-3 py-2 text-[10px] font-bold text-slate-400 uppercase tracking-wider">

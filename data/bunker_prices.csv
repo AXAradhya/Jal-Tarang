@@ -1,6 +1,529 @@
-port_code,fuel_grade,price_usd_per_mt,price_date
-SGSIN,VLSFO,835.00,2026-09-02
-SGSIN,MGO,1450.00,2026-09-02
-SGSIN,VLSFO,919.00,2026-09-18
-SGSIN,MGO,1546.00,2026-09-18
-AEFUJ,VLSFO,810.00,2026-09-18
+port_code,port_name,fuel_grade,price_usd_per_mt,price_date,currency,unit,source,region
+SGSIN,Singapore,VLSFO,882.5,2026-09-01,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,885.0,2026-09-02,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,879.5,2026-09-03,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,879.0,2026-09-04,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,868.0,2026-09-07,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,856.0,2026-09-08,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,857.0,2026-09-09,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,860.5,2026-09-10,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,867.0,2026-09-11,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,858.0,2026-09-14,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,858.0,2026-09-15,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,857.5,2026-09-16,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,856.5,2026-09-17,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,866.0,2026-09-18,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,870.0,2026-09-21,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,882.0,2026-09-22,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,878.5,2026-09-23,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,875.0,2026-09-24,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,874.5,2026-09-25,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,871.0,2026-09-28,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,875.5,2026-09-29,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,VLSFO,874.0,2026-09-30,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1330.0,2026-09-01,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1330.0,2026-09-02,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1323.0,2026-09-03,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1319.5,2026-09-04,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1299.0,2026-09-07,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1286.0,2026-09-08,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1292.0,2026-09-09,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1303.5,2026-09-10,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1315.0,2026-09-11,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1305.5,2026-09-14,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1311.0,2026-09-15,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1306.5,2026-09-16,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1308.0,2026-09-17,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1319.0,2026-09-18,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1318.0,2026-09-21,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1326.0,2026-09-22,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1322.5,2026-09-23,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1305.0,2026-09-24,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1309.0,2026-09-25,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1307.5,2026-09-28,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1304.0,2026-09-29,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,MGO,1304.0,2026-09-30,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,772.5,2026-09-01,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,776.0,2026-09-02,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,778.5,2026-09-03,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,776.0,2026-09-04,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,768.5,2026-09-07,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,761.0,2026-09-08,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,767.0,2026-09-09,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,772.0,2026-09-10,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,772.5,2026-09-11,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,762.5,2026-09-14,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,764.5,2026-09-15,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,758.5,2026-09-16,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,754.0,2026-09-17,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,760.5,2026-09-18,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,767.0,2026-09-21,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,772.5,2026-09-22,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,767.5,2026-09-23,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,757.0,2026-09-24,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,759.0,2026-09-25,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,756.5,2026-09-28,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,756.0,2026-09-29,USD,MT,Bunker Index,Singapore
+SGSIN,Singapore,HSFO,751.0,2026-09-30,USD,MT,Bunker Index,Singapore
+NLRTM,Rotterdam,VLSFO,703.5,2026-09-01,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,703.0,2026-09-02,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,704.0,2026-09-03,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,701.0,2026-09-04,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,695.0,2026-09-07,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,689.0,2026-09-08,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,690.5,2026-09-09,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,694.5,2026-09-10,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,702.5,2026-09-11,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,691.5,2026-09-14,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,695.5,2026-09-15,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,696.5,2026-09-16,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,692.5,2026-09-17,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,699.0,2026-09-18,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,699.0,2026-09-21,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,698.0,2026-09-22,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,699.0,2026-09-23,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,697.5,2026-09-24,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,700.0,2026-09-25,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,694.5,2026-09-28,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,698.0,2026-09-29,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,VLSFO,698.5,2026-09-30,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1436.5,2026-09-01,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1440.0,2026-09-02,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1438.0,2026-09-03,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1435.0,2026-09-04,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1426.5,2026-09-07,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1415.5,2026-09-08,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1415.5,2026-09-09,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1412.5,2026-09-10,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1427.0,2026-09-11,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1406.5,2026-09-14,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1416.0,2026-09-15,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1418.0,2026-09-16,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1419.0,2026-09-17,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1427.0,2026-09-18,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1423.0,2026-09-21,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1430.0,2026-09-22,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1436.5,2026-09-23,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1434.0,2026-09-24,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1426.0,2026-09-25,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1424.5,2026-09-28,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1434.5,2026-09-29,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,MGO,1430.0,2026-09-30,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,637.5,2026-09-01,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,639.5,2026-09-02,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,638.5,2026-09-03,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,632.0,2026-09-04,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,619.0,2026-09-07,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,617.5,2026-09-08,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,620.0,2026-09-09,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,621.0,2026-09-10,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,626.5,2026-09-11,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,620.5,2026-09-14,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,620.0,2026-09-15,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,620.5,2026-09-16,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,622.5,2026-09-17,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,631.0,2026-09-18,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,634.0,2026-09-21,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,640.5,2026-09-22,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,639.5,2026-09-23,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,637.5,2026-09-24,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,637.0,2026-09-25,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,635.5,2026-09-28,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,639.0,2026-09-29,USD,MT,Bunker Index,ARA
+NLRTM,Rotterdam,HSFO,638.5,2026-09-30,USD,MT,Bunker Index,ARA
+AEFUJ,Fujairah,VLSFO,990.5,2026-09-01,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,991.0,2026-09-02,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,981.5,2026-09-03,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,982.0,2026-09-04,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,975.0,2026-09-07,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,969.0,2026-09-08,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,971.5,2026-09-09,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,970.0,2026-09-10,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,979.0,2026-09-11,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,967.5,2026-09-14,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,958.0,2026-09-15,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,960.0,2026-09-16,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,960.5,2026-09-17,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,966.0,2026-09-18,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,966.5,2026-09-21,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,974.0,2026-09-22,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,982.5,2026-09-23,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,975.0,2026-09-24,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,974.0,2026-09-25,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,975.5,2026-09-28,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,976.5,2026-09-29,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,VLSFO,976.0,2026-09-30,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1679.5,2026-09-01,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1688.5,2026-09-02,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1676.0,2026-09-03,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1685.5,2026-09-04,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1666.0,2026-09-07,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1656.0,2026-09-08,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1671.0,2026-09-09,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1675.5,2026-09-10,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1685.0,2026-09-11,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1673.5,2026-09-14,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1677.0,2026-09-15,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1679.5,2026-09-16,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1690.5,2026-09-17,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1702.0,2026-09-18,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1696.0,2026-09-21,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1712.0,2026-09-22,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1700.0,2026-09-23,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1698.0,2026-09-24,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1676.5,2026-09-25,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1681.5,2026-09-28,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1691.0,2026-09-29,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,MGO,1686.0,2026-09-30,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,718.5,2026-09-01,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,724.0,2026-09-02,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,719.5,2026-09-03,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,720.0,2026-09-04,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,715.0,2026-09-07,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,704.5,2026-09-08,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,706.5,2026-09-09,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,706.0,2026-09-10,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,714.0,2026-09-11,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,709.0,2026-09-14,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,713.0,2026-09-15,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,710.5,2026-09-16,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,709.0,2026-09-17,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,710.5,2026-09-18,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,714.0,2026-09-21,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,714.5,2026-09-22,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,709.0,2026-09-23,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,707.0,2026-09-24,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,706.5,2026-09-25,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,707.5,2026-09-28,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,710.0,2026-09-29,USD,MT,Bunker Index,Middle East
+AEFUJ,Fujairah,HSFO,708.0,2026-09-30,USD,MT,Bunker Index,Middle East
+USHOU,Houston,VLSFO,746.5,2026-09-01,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,741.0,2026-09-02,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,738.0,2026-09-03,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,738.5,2026-09-04,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,731.0,2026-09-07,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,724.0,2026-09-08,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,729.0,2026-09-09,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,729.0,2026-09-10,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,732.5,2026-09-11,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,729.0,2026-09-14,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,734.5,2026-09-15,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,739.5,2026-09-16,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,737.5,2026-09-17,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,746.5,2026-09-18,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,749.5,2026-09-21,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,756.0,2026-09-22,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,753.0,2026-09-23,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,748.5,2026-09-24,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,751.5,2026-09-25,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,744.5,2026-09-28,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,746.0,2026-09-29,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,VLSFO,748.0,2026-09-30,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1408.5,2026-09-01,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1411.0,2026-09-02,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1400.0,2026-09-03,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1398.5,2026-09-04,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1373.0,2026-09-07,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1353.0,2026-09-08,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1347.0,2026-09-09,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1356.0,2026-09-10,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1359.0,2026-09-11,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1354.0,2026-09-14,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1363.5,2026-09-15,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1372.5,2026-09-16,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1374.5,2026-09-17,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1390.5,2026-09-18,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1394.0,2026-09-21,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1408.0,2026-09-22,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1406.5,2026-09-23,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1395.0,2026-09-24,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1394.0,2026-09-25,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1397.0,2026-09-28,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1391.0,2026-09-29,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,MGO,1386.5,2026-09-30,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,565.5,2026-09-01,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,563.0,2026-09-02,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,558.5,2026-09-03,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,556.0,2026-09-04,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,552.0,2026-09-07,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,546.5,2026-09-08,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,549.5,2026-09-09,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,553.5,2026-09-10,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,555.0,2026-09-11,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,546.0,2026-09-14,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,549.0,2026-09-15,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,549.0,2026-09-16,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,547.0,2026-09-17,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,550.0,2026-09-18,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,553.5,2026-09-21,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,558.5,2026-09-22,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,558.0,2026-09-23,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,559.0,2026-09-24,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,558.0,2026-09-25,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,556.0,2026-09-28,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,558.0,2026-09-29,USD,MT,Bunker Index,US Gulf
+USHOU,Houston,HSFO,556.5,2026-09-30,USD,MT,Bunker Index,US Gulf
+HKHKG,Hong Kong,VLSFO,965.0,2026-09-01,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,969.5,2026-09-02,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,969.5,2026-09-03,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,963.0,2026-09-04,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,954.0,2026-09-07,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,941.0,2026-09-08,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,935.0,2026-09-09,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,937.0,2026-09-10,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,944.5,2026-09-11,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,928.0,2026-09-14,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,926.5,2026-09-15,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,930.0,2026-09-16,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,922.5,2026-09-17,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,929.5,2026-09-18,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,927.5,2026-09-21,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,933.5,2026-09-22,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,926.5,2026-09-23,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,918.5,2026-09-24,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,913.5,2026-09-25,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,910.0,2026-09-28,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,916.0,2026-09-29,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,VLSFO,912.5,2026-09-30,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1306.5,2026-09-01,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1304.0,2026-09-02,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1305.5,2026-09-03,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1301.0,2026-09-04,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1287.0,2026-09-07,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1283.5,2026-09-08,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1291.0,2026-09-09,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1290.0,2026-09-10,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1309.0,2026-09-11,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1298.5,2026-09-14,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1291.0,2026-09-15,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1304.0,2026-09-16,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1303.5,2026-09-17,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1310.0,2026-09-18,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1320.0,2026-09-21,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1334.0,2026-09-22,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1321.0,2026-09-23,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1316.0,2026-09-24,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1317.0,2026-09-25,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1322.0,2026-09-28,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1328.0,2026-09-29,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,MGO,1329.5,2026-09-30,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,860.0,2026-09-01,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,863.0,2026-09-02,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,860.5,2026-09-03,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,857.5,2026-09-04,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,854.0,2026-09-07,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,847.0,2026-09-08,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,851.5,2026-09-09,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,845.5,2026-09-10,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,852.0,2026-09-11,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,847.5,2026-09-14,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,857.5,2026-09-15,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,856.5,2026-09-16,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,855.0,2026-09-17,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,860.5,2026-09-18,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,865.5,2026-09-21,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,870.0,2026-09-22,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,865.5,2026-09-23,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,860.0,2026-09-24,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,858.5,2026-09-25,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,860.0,2026-09-28,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,863.5,2026-09-29,USD,MT,Bunker Index,Far East
+HKHKG,Hong Kong,HSFO,862.0,2026-09-30,USD,MT,Bunker Index,Far East
+USLAX,Los Angeles / Long Beach,VLSFO,1012.5,2026-09-01,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1011.0,2026-09-02,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1011.5,2026-09-03,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1013.5,2026-09-04,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1006.5,2026-09-07,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1003.0,2026-09-08,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1001.0,2026-09-09,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,999.0,2026-09-10,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1008.5,2026-09-11,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1007.0,2026-09-14,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1004.0,2026-09-15,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1004.5,2026-09-16,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1007.0,2026-09-17,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1014.5,2026-09-18,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1014.5,2026-09-21,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1015.5,2026-09-22,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1021.5,2026-09-23,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1021.0,2026-09-24,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1016.0,2026-09-25,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1016.0,2026-09-28,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1023.5,2026-09-29,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,VLSFO,1014.0,2026-09-30,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1668.5,2026-09-01,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1673.0,2026-09-02,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1668.0,2026-09-03,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1660.5,2026-09-04,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1642.5,2026-09-07,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1625.5,2026-09-08,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1626.5,2026-09-09,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1626.0,2026-09-10,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1634.5,2026-09-11,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1623.5,2026-09-14,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1623.0,2026-09-15,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1628.5,2026-09-16,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1635.0,2026-09-17,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1647.5,2026-09-18,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1654.5,2026-09-21,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1665.0,2026-09-22,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1658.0,2026-09-23,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1652.0,2026-09-24,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1648.5,2026-09-25,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1641.5,2026-09-28,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1632.5,2026-09-29,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,MGO,1631.5,2026-09-30,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,855.5,2026-09-01,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,859.0,2026-09-02,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,858.5,2026-09-03,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,851.0,2026-09-04,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,837.5,2026-09-07,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,828.0,2026-09-08,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,835.5,2026-09-09,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,834.5,2026-09-10,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,830.0,2026-09-11,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,818.0,2026-09-14,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,821.5,2026-09-15,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,820.5,2026-09-16,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,822.0,2026-09-17,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,820.5,2026-09-18,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,819.5,2026-09-21,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,826.5,2026-09-22,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,825.0,2026-09-23,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,821.5,2026-09-24,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,823.5,2026-09-25,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,824.0,2026-09-28,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,822.0,2026-09-29,USD,MT,Bunker Index,US West Coast
+USLAX,Los Angeles / Long Beach,HSFO,820.5,2026-09-30,USD,MT,Bunker Index,US West Coast
+USNYC,New York,VLSFO,769.0,2026-09-01,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,778.5,2026-09-02,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,776.5,2026-09-03,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,771.5,2026-09-04,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,767.5,2026-09-07,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,767.5,2026-09-08,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,769.0,2026-09-09,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,774.0,2026-09-10,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,780.0,2026-09-11,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,775.5,2026-09-14,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,775.5,2026-09-15,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,779.5,2026-09-16,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,780.0,2026-09-17,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,781.5,2026-09-18,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,787.0,2026-09-21,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,795.0,2026-09-22,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,799.5,2026-09-23,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,797.0,2026-09-24,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,795.5,2026-09-25,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,796.5,2026-09-28,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,803.5,2026-09-29,USD,MT,Bunker Index,US East Coast
+USNYC,New York,VLSFO,803.0,2026-09-30,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1500.0,2026-09-01,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1500.5,2026-09-02,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1487.5,2026-09-03,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1479.5,2026-09-04,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1460.5,2026-09-07,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1439.5,2026-09-08,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1447.5,2026-09-09,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1450.5,2026-09-10,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1458.5,2026-09-11,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1445.0,2026-09-14,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1450.0,2026-09-15,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1458.0,2026-09-16,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1460.5,2026-09-17,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1474.0,2026-09-18,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1484.5,2026-09-21,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1496.5,2026-09-22,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1496.0,2026-09-23,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1480.5,2026-09-24,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1478.0,2026-09-25,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1481.5,2026-09-28,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1491.5,2026-09-29,USD,MT,Bunker Index,US East Coast
+USNYC,New York,MGO,1487.0,2026-09-30,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,654.5,2026-09-01,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,653.0,2026-09-02,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,646.5,2026-09-03,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,638.5,2026-09-04,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,633.5,2026-09-07,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,627.0,2026-09-08,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,624.0,2026-09-09,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,628.0,2026-09-10,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,633.5,2026-09-11,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,622.5,2026-09-14,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,622.5,2026-09-15,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,622.0,2026-09-16,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,625.5,2026-09-17,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,631.0,2026-09-18,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,637.0,2026-09-21,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,637.5,2026-09-22,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,636.0,2026-09-23,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,632.5,2026-09-24,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,633.0,2026-09-25,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,633.5,2026-09-28,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,633.5,2026-09-29,USD,MT,Bunker Index,US East Coast
+USNYC,New York,HSFO,627.5,2026-09-30,USD,MT,Bunker Index,US East Coast
+BRSSZ,Santos,VLSFO,884.0,2026-09-01,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,885.0,2026-09-02,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,881.5,2026-09-03,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,876.0,2026-09-04,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,867.0,2026-09-07,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,854.0,2026-09-08,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,851.0,2026-09-09,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,855.5,2026-09-10,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,859.5,2026-09-11,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,851.0,2026-09-14,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,848.0,2026-09-15,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,846.5,2026-09-16,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,846.0,2026-09-17,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,847.0,2026-09-18,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,853.0,2026-09-21,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,864.0,2026-09-22,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,865.0,2026-09-23,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,862.5,2026-09-24,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,861.5,2026-09-25,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,860.5,2026-09-28,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,858.5,2026-09-29,USD,MT,Bunker Index,South America
+BRSSZ,Santos,VLSFO,855.0,2026-09-30,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1719.5,2026-09-01,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1722.5,2026-09-02,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1716.5,2026-09-03,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1701.5,2026-09-04,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1683.5,2026-09-07,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1670.5,2026-09-08,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1678.5,2026-09-09,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1681.5,2026-09-10,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1688.5,2026-09-11,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1662.5,2026-09-14,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1665.0,2026-09-15,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1670.5,2026-09-16,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1663.0,2026-09-17,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1673.5,2026-09-18,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1671.0,2026-09-21,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1664.0,2026-09-22,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1660.5,2026-09-23,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1647.0,2026-09-24,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1643.5,2026-09-25,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1643.5,2026-09-28,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1653.0,2026-09-29,USD,MT,Bunker Index,South America
+BRSSZ,Santos,MGO,1645.5,2026-09-30,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,521.5,2026-09-01,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,524.0,2026-09-02,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,523.0,2026-09-03,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,518.5,2026-09-04,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,508.5,2026-09-07,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,505.5,2026-09-08,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,507.0,2026-09-09,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,511.0,2026-09-10,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,513.0,2026-09-11,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,512.5,2026-09-14,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,512.0,2026-09-15,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,514.5,2026-09-16,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,515.5,2026-09-17,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,517.5,2026-09-18,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,519.0,2026-09-21,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,520.0,2026-09-22,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,517.5,2026-09-23,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,514.0,2026-09-24,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,510.5,2026-09-25,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,508.0,2026-09-28,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,510.5,2026-09-29,USD,MT,Bunker Index,South America
+BRSSZ,Santos,HSFO,511.0,2026-09-30,USD,MT,Bunker Index,South America

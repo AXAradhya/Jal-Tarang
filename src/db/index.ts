@@ -16,6 +16,7 @@ import {
   REAL_ML_MODELS,
   REAL_MODEL_VERSIONS,
   REAL_FORECAST_RUNS,
+  REAL_BUNKER_PRICES,
 } from './enterprise_fallback_dataset.js';
 import fs from 'fs';
 import path from 'path';
@@ -351,14 +352,28 @@ export function handleFallbackQuery(text: string, params?: any[]): { rows: any[]
 
   // 14. Bunker prices
   if (lower.includes('bunker')) {
-    return {
-      rows: [
-        { id: 'bnk-1', port_code: 'SGSIN', port_name: 'Singapore', fuel_type: 'VLSFO', price_usd_per_mt: 618.5, date: '2026-09-16' },
-        { id: 'bnk-2', port_code: 'INPAV', port_name: 'Paradip Port', fuel_type: 'VLSFO', price_usd_per_mt: 642.0, date: '2026-09-16' },
-        { id: 'bnk-3', port_code: 'AUGLT', port_name: 'Gladstone Port', fuel_type: 'VLSFO', price_usd_per_mt: 635.0, date: '2026-09-16' },
-      ],
-      rowCount: 3,
-    };
+    const formattedBunkers = REAL_BUNKER_PRICES.map((b: any, idx: number) => ({
+      id: `bnk-${idx + 1}`,
+      category: 'BUNKER',
+      port_id: b.port_code,
+      port_code: b.port_code,
+      port_name: b.port_name || b.port || b.port_code,
+      location: b.port_name || b.port || b.port_code,
+      fuel_grade: b.fuel_grade || b.fuel_type || 'VLSFO',
+      fuel_type: b.fuel_type || b.fuel_grade || 'VLSFO',
+      code: b.fuel_grade || b.fuel_type || 'VLSFO',
+      price_usd_per_mt: Number(b.price_usd_per_mt || b.price_usd_mt || 850),
+      price_usd_mt: Number(b.price_usd_per_mt || b.price_usd_mt || 850),
+      value_usd: Number(b.price_usd_per_mt || b.price_usd_mt || 850),
+      unit: 'USD/MT',
+      date: b.price_date || b.date,
+      price_date: b.price_date || b.date,
+      observation_date: b.price_date || b.date,
+      source: b.source || 'BUNKER_INDEX',
+      region: b.region || b.port_name || b.port_code,
+      created_at: `${b.price_date || b.date}T00:00:00Z`,
+    }));
+    return { rows: formattedBunkers, rowCount: formattedBunkers.length };
   }
 
   // 15. Audit logs

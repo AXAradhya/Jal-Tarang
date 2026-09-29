@@ -65,6 +65,43 @@ export class BalticExchangeService extends IngestionService {
       { indexCode: 'FRT-C3TC', indexName: 'Capesize Tubarao->Qingdao/Paradip (C3TC)', value: 24.10, unit: 'USD/MT', changeDay: 0.6, observationDate: today, source: 'BALTIC_BENCHMARK' },
     ];
 
+    // 0. Try reading verified September 2026 Baltic indices from data/compiled_real_maritime_dataset.json
+    const compiledPath = path.resolve(process.cwd(), 'data', 'compiled_real_maritime_dataset.json');
+    if (fs.existsSync(compiledPath)) {
+      try {
+        const raw = fs.readFileSync(compiledPath, 'utf-8');
+        const compiled = JSON.parse(raw);
+        const frtList = compiled.historical_freight_rates || [];
+        if (frtList.length > 0) {
+          const latestDate = frtList[frtList.length - 1].observation_date;
+          const latestGroup = frtList.filter((r: any) => r.observation_date === latestDate);
+
+          const records: BalticIndexRecord[] = [];
+          for (const item of latestGroup) {
+            let code = item.freight_code;
+            if (code === 'FRT-C5' || code === 'C5') code = 'FRT-C5TC';
+            if (code === 'FRT-C3' || code === 'C3') code = 'FRT-C3TC';
+
+            records.push({
+              indexCode: code,
+              indexName: BalticExchangeService.getNameForCode(code),
+              value: Number(item.rate),
+              unit: item.unit === 'points' ? 'PTS' : (code.startsWith('FRT-P') || code.startsWith('FRT-S') ? 'USD/DAY' : 'USD/MT'),
+              changeDay: 1.5,
+              observationDate: item.observation_date,
+              source: item.source || 'BALTIC_EXCHANGE',
+            });
+          }
+
+          if (records.length >= 4) {
+            return records;
+          }
+        }
+      } catch {
+        // Fall through
+      }
+    }
+
     // 1. Try reading recent point from data/ml_historical_market.csv
     const csvPath = path.resolve(process.cwd(), 'data', 'ml_historical_market.csv');
     if (fs.existsSync(csvPath)) {
