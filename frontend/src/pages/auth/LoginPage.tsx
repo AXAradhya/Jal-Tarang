@@ -118,13 +118,16 @@ export const LoginPage: React.FC = () => {
       console.warn('[Login Gateway] Authentication response:', err);
 
       const isGatewayUnreachable =
+        err.isGatewayOffline ||
         err.response?.status === 405 ||
         err.response?.status === 404 ||
         err.response?.status >= 500 ||
         err.code === 'ERR_NETWORK' ||
         err.message?.includes('Network Error') ||
-        err.message?.includes('status code 405') ||
+        err.message?.includes('405') ||
+        err.message?.toLowerCase().includes('method not allowed') ||
         err.message?.includes('HTML page') ||
+        err.message?.includes('Cloud Edge') ||
         !err.response;
 
       if (isGatewayUnreachable) {
