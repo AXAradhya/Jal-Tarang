@@ -1,0 +1,8 @@
+port_name,un_locode,terminal_name,berth_name,max_loa_m,max_beam_m,max_draft_m,max_dwt_mt
+Paradip,INPRT,Mechanised Coal Handling Plant,CB-1,300.0,46.0,14.5,120000
+Paradip,INPRT,Mechanised Coal Handling Plant,CB-2,300.0,46.0,14.5,120000
+Paradip,INPRT,New Coal Import Berth,NCIB,300.0,46.0,16.0,180000
+Paradip,INPRT,Iron Ore Berth,IOB,230.0,38.0,13.0,85000
+Visakhapatnam,INVTZ,Inner Harbour West Quay,WQ-2,240.0,32.5,13.5,80000
+Visakhapatnam,INVTZ,Inner Harbour West Quay,WQ-6,230.0,32.5,14.5,85000
+Visakhapatnam,INVTZ,Inner Harbour East Quay,EQ-1,240.0,32.5,14.5,85000

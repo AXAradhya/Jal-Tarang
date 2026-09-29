@@ -1,0 +1,4 @@
+requirement_code,plant_name,cargo_type,commodity_code,quantity_mt,origin_port,destination_port,moisture_pct,ash_content_pct
+REQ-2026-BSL-HCC-01,Bokaro Steel Plant,COKING_COAL,HCC_MOATIZE,38000,MZBEW,INHAL,9.0,10.5
+REQ-2026-BSP-HCC-02,Bhilai Steel Plant,COKING_COAL,HCC_PEAK_DOWNS,75000,AUGLT,INPRT,9.5,9.5
+REQ-2026-RSP-HCC-03,Rourkela Steel Plant,COKING_COAL,HCC_HAY_POINT,150000,AUHPT,INVTZ,9.5,9.0

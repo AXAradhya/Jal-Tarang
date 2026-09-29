@@ -1,0 +1,1949 @@
+{
+  "meta": {
+    "generated_at": "2026-09-19T17:48:11.814826Z",
+    "ais_codes_count": 110,
+    "berths_count": 7,
+    "indian_congestion_records_count": 78,
+    "fleet_count": 4,
+    "memory_protection": "Reference Master Only - Telemetry & Voyages Excluded"
+  },
+  "ais_vessel_type_codes": [
+    {
+      "vessel_group": "Not Available",
+      "vessel_type_code": "0",
+      "classification_name": "Not available or no ship, default",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1-19",
+      "classification_name": "Reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "20",
+      "classification_name": "Wing in ground (WIG), all ships of this type",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tug Tow",
+      "vessel_type_code": "21",
+      "classification_name": "Wing in ground (WIG), hazardous category A",
+      "hazard_category": "A",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tug Tow",
+      "vessel_type_code": "22",
+      "classification_name": "Wing in ground (WIG), hazardous category B",
+      "hazard_category": "B",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "23",
+      "classification_name": "Wing in ground (WIG), hazardous category C",
+      "hazard_category": "C",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "24",
+      "classification_name": "Wing in ground (WIG), hazardous category D",
+      "hazard_category": "D",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "25",
+      "classification_name": "Wing in ground (WIG), reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "26",
+      "classification_name": "Wing in ground (WIG), reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "27",
+      "classification_name": "Wing in ground (WIG), reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "28",
+      "classification_name": "Wing in ground (WIG), reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "29",
+      "classification_name": "Wing in ground (WIG), reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Fishing",
+      "vessel_type_code": "30",
+      "classification_name": "Fishing",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tug Tow",
+      "vessel_type_code": "31",
+      "classification_name": "Towing",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tug Tow",
+      "vessel_type_code": "32",
+      "classification_name": "Towing: length exceeds 200m or breadth exceeds 25m",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "33",
+      "classification_name": "Dredging or underwater operations",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "34",
+      "classification_name": "Diving operations",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Military",
+      "vessel_type_code": "35",
+      "classification_name": "Military operations",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Pleasure Craft/Sailing",
+      "vessel_type_code": "36",
+      "classification_name": "Sailing",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Pleasure Craft/Sailing",
+      "vessel_type_code": "37",
+      "classification_name": "Pleasure Craft",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "38",
+      "classification_name": "Reserved",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "39",
+      "classification_name": "Reserved",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "40",
+      "classification_name": "High speed craft (HSC), all ships of this type",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "41",
+      "classification_name": "High speed craft (HSC), hazardous category A",
+      "hazard_category": "A",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "42",
+      "classification_name": "High speed craft (HSC), hazardous category B",
+      "hazard_category": "B",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "43",
+      "classification_name": "High speed craft (HSC), hazardous category C",
+      "hazard_category": "C",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "44",
+      "classification_name": "High speed craft (HSC), hazardous category D",
+      "hazard_category": "D",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "45",
+      "classification_name": "High speed craft (HSC), reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "46",
+      "classification_name": "High speed craft (HSC), reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "47",
+      "classification_name": "High speed craft (HSC), reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "48",
+      "classification_name": "High speed craft (HSC), reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "49",
+      "classification_name": "High speed craft (HSC), no additional information",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "50",
+      "classification_name": "Pilot Vessel",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "51",
+      "classification_name": "Search and Rescue vessel",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tug Tow",
+      "vessel_type_code": "52",
+      "classification_name": "Tug",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "53",
+      "classification_name": "Port Tender",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "54",
+      "classification_name": "Anti-pollution equipment",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "55",
+      "classification_name": "Law Enforcement",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "56",
+      "classification_name": "Spare - for assignment to local vessel",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "57",
+      "classification_name": "Spare - for assignment to local vessel",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "58",
+      "classification_name": "Medical Transport",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "59",
+      "classification_name": "Ship according to RR Resolution No. 18",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "60",
+      "classification_name": "Passenger, all ships of this type",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "61",
+      "classification_name": "Passenger, hazardous category A",
+      "hazard_category": "A",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "62",
+      "classification_name": "Passenger, hazardous category B",
+      "hazard_category": "B",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "63",
+      "classification_name": "Passenger, hazardous category C",
+      "hazard_category": "C",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "64",
+      "classification_name": "Passenger, hazardous category D",
+      "hazard_category": "D",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "65",
+      "classification_name": "Passenger, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "66",
+      "classification_name": "Passenger, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "67",
+      "classification_name": "Passenger, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "68",
+      "classification_name": "Passenger, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "69",
+      "classification_name": "Passenger, no additional information",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "70",
+      "classification_name": "Cargo, all ships of this type",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "71",
+      "classification_name": "Cargo, hazardous category A",
+      "hazard_category": "A",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "72",
+      "classification_name": "Cargo, hazardous category B",
+      "hazard_category": "B",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "73",
+      "classification_name": "Cargo, hazardous category C",
+      "hazard_category": "C",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "74",
+      "classification_name": "Cargo, hazardous category D",
+      "hazard_category": "D",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "75",
+      "classification_name": "Cargo, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "76",
+      "classification_name": "Cargo, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "77",
+      "classification_name": "Cargo, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "78",
+      "classification_name": "Cargo, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "79",
+      "classification_name": "Cargo, no additional information",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "80",
+      "classification_name": "Tanker, all ships of this type",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "81",
+      "classification_name": "Tanker, hazardous category A",
+      "hazard_category": "A",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "82",
+      "classification_name": "Tanker, hazardous category B",
+      "hazard_category": "B",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "83",
+      "classification_name": "Tanker, hazardous category C",
+      "hazard_category": "C",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "84",
+      "classification_name": "Tanker, hazardous category D",
+      "hazard_category": "D",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "85",
+      "classification_name": "Tanker, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "86",
+      "classification_name": "Tanker, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "87",
+      "classification_name": "Tanker, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "88",
+      "classification_name": "Tanker, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "89",
+      "classification_name": "Tanker, no additional information",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "90",
+      "classification_name": "Other Type, all ships of this type",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "91",
+      "classification_name": "Other Type, hazardous category A",
+      "hazard_category": "A",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "92",
+      "classification_name": "Other Type, hazardous category B",
+      "hazard_category": "B",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "93",
+      "classification_name": "Other Type, hazardous category C",
+      "hazard_category": "C",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "94",
+      "classification_name": "Other Type, hazardous category D",
+      "hazard_category": "D",
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "95",
+      "classification_name": "Other Type, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "96",
+      "classification_name": "Other Type, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "97",
+      "classification_name": "Other Type, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "98",
+      "classification_name": "Other Type, reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "99",
+      "classification_name": "Other Type, no additional information",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "100-199",
+      "classification_name": "Reserved for regional use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "200-255",
+      "classification_name": "Reserved for future use",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "256-999",
+      "classification_name": "No designation",
+      "hazard_category": null,
+      "is_avis_service": false,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Fishing",
+      "vessel_type_code": "1001",
+      "classification_name": "Commercial Fishing Vessel",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Fishing",
+      "vessel_type_code": "1002",
+      "classification_name": "Fish Processing Vessel",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "1003",
+      "classification_name": "Freight Barge",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "1004",
+      "classification_name": "Freight Ship",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1005",
+      "classification_name": "Industrial Vessel",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1006",
+      "classification_name": "Miscellaneous Vessel",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1007",
+      "classification_name": "Mobile Offshore Drilling Unit",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1008",
+      "classification_name": "Non-vessel",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1009",
+      "classification_name": "NON-VESSEL",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1010",
+      "classification_name": "Offshore Supply Vessel",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1011",
+      "classification_name": "Oil Recovery",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "1012",
+      "classification_name": "Passenger (Inspected)",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "1013",
+      "classification_name": "Passenger (Uninspected)",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "1014",
+      "classification_name": "Passenger Barge (Inspected)",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Passenger",
+      "vessel_type_code": "1015",
+      "classification_name": "Passenger Barge (Uninspected)",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Cargo",
+      "vessel_type_code": "1016",
+      "classification_name": "Public Freight",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "1017",
+      "classification_name": "Public Tankship/Barge",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1018",
+      "classification_name": "Public Vessel, Unclassified",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Pleasure Craft/Sailing",
+      "vessel_type_code": "1019",
+      "classification_name": "Recreational",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1020",
+      "classification_name": "Research Vessel",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Military",
+      "vessel_type_code": "1021",
+      "classification_name": "SAR Aircraft",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Other",
+      "vessel_type_code": "1022",
+      "classification_name": "School Ship",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tug Tow",
+      "vessel_type_code": "1023",
+      "classification_name": "Tank Barge",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tanker",
+      "vessel_type_code": "1024",
+      "classification_name": "Tank Ship",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    },
+    {
+      "vessel_group": "Tug Tow",
+      "vessel_type_code": "1025",
+      "classification_name": "Towing Vessel",
+      "hazard_category": null,
+      "is_avis_service": true,
+      "source": "USCG_NOAA_BOEM_MARINE_CADASTRE_2018"
+    }
+  ],
+  "ports_and_berths": [
+    {
+      "port_name": "Paradip",
+      "un_locode": "INPRT",
+      "terminal_name": "Mechanised Coal Handling Plant",
+      "berth_name": "CB-1",
+      "max_loa_m": 300.0,
+      "max_beam_m": 46.0,
+      "max_draft_m": 14.5,
+      "max_dwt_mt": 120000.0
+    },
+    {
+      "port_name": "Paradip",
+      "un_locode": "INPRT",
+      "terminal_name": "Mechanised Coal Handling Plant",
+      "berth_name": "CB-2",
+      "max_loa_m": 300.0,
+      "max_beam_m": 46.0,
+      "max_draft_m": 14.5,
+      "max_dwt_mt": 120000.0
+    },
+    {
+      "port_name": "Paradip",
+      "un_locode": "INPRT",
+      "terminal_name": "New Coal Import Berth",
+      "berth_name": "NCIB",
+      "max_loa_m": 300.0,
+      "max_beam_m": 46.0,
+      "max_draft_m": 16.0,
+      "max_dwt_mt": 180000.0
+    },
+    {
+      "port_name": "Paradip",
+      "un_locode": "INPRT",
+      "terminal_name": "Iron Ore Berth",
+      "berth_name": "IOB",
+      "max_loa_m": 230.0,
+      "max_beam_m": 38.0,
+      "max_draft_m": 13.0,
+      "max_dwt_mt": 85000.0
+    },
+    {
+      "port_name": "Visakhapatnam",
+      "un_locode": "INVTZ",
+      "terminal_name": "Inner Harbour West Quay",
+      "berth_name": "WQ-2",
+      "max_loa_m": 240.0,
+      "max_beam_m": 32.5,
+      "max_draft_m": 13.5,
+      "max_dwt_mt": 80000.0
+    },
+    {
+      "port_name": "Visakhapatnam",
+      "un_locode": "INVTZ",
+      "terminal_name": "Inner Harbour West Quay",
+      "berth_name": "WQ-6",
+      "max_loa_m": 230.0,
+      "max_beam_m": 32.5,
+      "max_draft_m": 14.5,
+      "max_dwt_mt": 85000.0
+    },
+    {
+      "port_name": "Visakhapatnam",
+      "un_locode": "INVTZ",
+      "terminal_name": "Inner Harbour East Quay",
+      "berth_name": "EQ-1",
+      "max_loa_m": 240.0,
+      "max_beam_m": 32.5,
+      "max_draft_m": 14.5,
+      "max_dwt_mt": 85000.0
+    }
+  ],
+  "historical_freight_rates": [
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-17",
+      "rate": 3336.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-16",
+      "rate": 3327.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-15",
+      "rate": 3360.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-14",
+      "rate": 3445.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-11",
+      "rate": 3507.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-10",
+      "rate": 3521.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-09",
+      "rate": 3620.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-08",
+      "rate": 3584.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-07",
+      "rate": 3575.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-04",
+      "rate": 3628.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-03",
+      "rate": 3488.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-02",
+      "rate": 3331.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-09-01",
+      "rate": 3157.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-28",
+      "rate": 3186.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-27",
+      "rate": 3107.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-26",
+      "rate": 3056.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-25",
+      "rate": 2926.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-24",
+      "rate": 2882.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-21",
+      "rate": 2841.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-20",
+      "rate": 2791.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-19",
+      "rate": 2776.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-18",
+      "rate": 2815.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-17",
+      "rate": 2878.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-14",
+      "rate": 2863.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-13",
+      "rate": 2844.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-12",
+      "rate": 2939.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-11",
+      "rate": 3046.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-10",
+      "rate": 3083.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-07",
+      "rate": 3089.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    },
+    {
+      "freight_code": "BDI",
+      "observation_date": "2026-08-06",
+      "rate": 3057.0,
+      "currency": "USD",
+      "unit": "INDEX",
+      "source": "BALTIC_EXCHANGE"
+    }
+  ],
+  "indian_port_congestion": [
+    {
+      "financial_year": "2017-18",
+      "port_name": "Chennai",
+      "avg_turnaround_time_hours": 52.99,
+      "output_per_berthday_tonnes": 16014.0,
+      "annual_traffic_thousand_tonnes": 51881.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "Chennai",
+      "avg_turnaround_time_hours": 47.41,
+      "output_per_berthday_tonnes": 17288.0,
+      "annual_traffic_thousand_tonnes": 53012.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "Chennai",
+      "avg_turnaround_time_hours": 48.01,
+      "output_per_berthday_tonnes": 16470.0,
+      "annual_traffic_thousand_tonnes": 46759.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "Chennai",
+      "avg_turnaround_time_hours": 51.38,
+      "output_per_berthday_tonnes": 15928.0,
+      "annual_traffic_thousand_tonnes": 43552.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "Chennai",
+      "avg_turnaround_time_hours": 53.19,
+      "output_per_berthday_tonnes": 15497.0,
+      "annual_traffic_thousand_tonnes": 48564.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "Chennai",
+      "avg_turnaround_time_hours": 48.22,
+      "output_per_berthday_tonnes": 15648.0,
+      "annual_traffic_thousand_tonnes": 44092.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "Cochin",
+      "avg_turnaround_time_hours": 37.02,
+      "output_per_berthday_tonnes": 20880.0,
+      "annual_traffic_thousand_tonnes": 29138.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "Cochin",
+      "avg_turnaround_time_hours": 35.21,
+      "output_per_berthday_tonnes": 22839.0,
+      "annual_traffic_thousand_tonnes": 32022.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "Cochin",
+      "avg_turnaround_time_hours": 34.7,
+      "output_per_berthday_tonnes": 23709.0,
+      "annual_traffic_thousand_tonnes": 34038.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "Cochin",
+      "avg_turnaround_time_hours": 35.83,
+      "output_per_berthday_tonnes": 22513.0,
+      "annual_traffic_thousand_tonnes": 31503.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "Cochin",
+      "avg_turnaround_time_hours": 34.64,
+      "output_per_berthday_tonnes": 24457.0,
+      "annual_traffic_thousand_tonnes": 34550.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "Cochin",
+      "avg_turnaround_time_hours": 33.41,
+      "output_per_berthday_tonnes": 24517.0,
+      "annual_traffic_thousand_tonnes": 36389.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "Deendayal",
+      "avg_turnaround_time_hours": 60.48,
+      "output_per_berthday_tonnes": 18531.0,
+      "annual_traffic_thousand_tonnes": 110099.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "Deendayal",
+      "avg_turnaround_time_hours": 72.23,
+      "output_per_berthday_tonnes": 17363.0,
+      "annual_traffic_thousand_tonnes": 115402.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "Deendayal",
+      "avg_turnaround_time_hours": 70.56,
+      "output_per_berthday_tonnes": 16890.0,
+      "annual_traffic_thousand_tonnes": 122606.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "Deendayal",
+      "avg_turnaround_time_hours": 67.92,
+      "output_per_berthday_tonnes": 14497.0,
+      "annual_traffic_thousand_tonnes": 117566.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "Deendayal",
+      "avg_turnaround_time_hours": 60.96,
+      "output_per_berthday_tonnes": 15501.0,
+      "annual_traffic_thousand_tonnes": 127100.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "Deendayal",
+      "avg_turnaround_time_hours": 77.28,
+      "output_per_berthday_tonnes": 16074.0,
+      "annual_traffic_thousand_tonnes": 136861.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "JNPA",
+      "avg_turnaround_time_hours": 53.8,
+      "output_per_berthday_tonnes": 23290.0,
+      "annual_traffic_thousand_tonnes": 66004.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "JNPA",
+      "avg_turnaround_time_hours": 51.22,
+      "output_per_berthday_tonnes": 26498.0,
+      "annual_traffic_thousand_tonnes": 70706.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "JNPA",
+      "avg_turnaround_time_hours": 29.52,
+      "output_per_berthday_tonnes": 27677.0,
+      "annual_traffic_thousand_tonnes": 68449.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "JNPA",
+      "avg_turnaround_time_hours": 28.56,
+      "output_per_berthday_tonnes": 26875.0,
+      "annual_traffic_thousand_tonnes": 64809.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "JNPA",
+      "avg_turnaround_time_hours": 28.08,
+      "output_per_berthday_tonnes": 28938.0,
+      "annual_traffic_thousand_tonnes": 75996.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "JNPA",
+      "avg_turnaround_time_hours": 28.47,
+      "output_per_berthday_tonnes": 27643.0,
+      "annual_traffic_thousand_tonnes": 104483.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "Kamarajar",
+      "avg_turnaround_time_hours": 52.85,
+      "output_per_berthday_tonnes": 24590.0,
+      "annual_traffic_thousand_tonnes": 30446.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "Kamarajar",
+      "avg_turnaround_time_hours": 47.27,
+      "output_per_berthday_tonnes": 24258.0,
+      "annual_traffic_thousand_tonnes": 34497.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "Kamarajar",
+      "avg_turnaround_time_hours": 44.4,
+      "output_per_berthday_tonnes": 23421.0,
+      "annual_traffic_thousand_tonnes": 31747.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "Kamarajar",
+      "avg_turnaround_time_hours": 42.97,
+      "output_per_berthday_tonnes": 21326.0,
+      "annual_traffic_thousand_tonnes": 25888.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "Kamarajar",
+      "avg_turnaround_time_hours": 46.38,
+      "output_per_berthday_tonnes": 24292.0,
+      "annual_traffic_thousand_tonnes": 38742.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "Kamarajar",
+      "avg_turnaround_time_hours": 45.4,
+      "output_per_berthday_tonnes": 26075.0,
+      "annual_traffic_thousand_tonnes": 41689.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "Mormugao",
+      "avg_turnaround_time_hours": 63.18,
+      "output_per_berthday_tonnes": 14525.0,
+      "annual_traffic_thousand_tonnes": 26897.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "Mormugao",
+      "avg_turnaround_time_hours": 63.06,
+      "output_per_berthday_tonnes": 12163.0,
+      "annual_traffic_thousand_tonnes": 17683.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "Mormugao",
+      "avg_turnaround_time_hours": 62.96,
+      "output_per_berthday_tonnes": 13258.0,
+      "annual_traffic_thousand_tonnes": 16017.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "Mormugao",
+      "avg_turnaround_time_hours": 75.66,
+      "output_per_berthday_tonnes": 12431.0,
+      "annual_traffic_thousand_tonnes": 21988.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "Mormugao",
+      "avg_turnaround_time_hours": 71.77,
+      "output_per_berthday_tonnes": 11824.0,
+      "annual_traffic_thousand_tonnes": 18456.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "Mormugao",
+      "avg_turnaround_time_hours": 61.47,
+      "output_per_berthday_tonnes": 15699.0,
+      "annual_traffic_thousand_tonnes": 17354.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "Mumbai",
+      "avg_turnaround_time_hours": 89.28,
+      "output_per_berthday_tonnes": 9043.0,
+      "annual_traffic_thousand_tonnes": 62828.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "Mumbai",
+      "avg_turnaround_time_hours": 60.42,
+      "output_per_berthday_tonnes": 10409.0,
+      "annual_traffic_thousand_tonnes": 60588.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "Mumbai",
+      "avg_turnaround_time_hours": 53.25,
+      "output_per_berthday_tonnes": 10993.0,
+      "annual_traffic_thousand_tonnes": 60696.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "Mumbai",
+      "avg_turnaround_time_hours": 59.07,
+      "output_per_berthday_tonnes": 10694.0,
+      "annual_traffic_thousand_tonnes": 53324.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "Mumbai",
+      "avg_turnaround_time_hours": 73.0,
+      "output_per_berthday_tonnes": 9091.0,
+      "annual_traffic_thousand_tonnes": 59891.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "Mumbai",
+      "avg_turnaround_time_hours": 67.42,
+      "output_per_berthday_tonnes": 10035.0,
+      "annual_traffic_thousand_tonnes": 63719.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "New Mangalore",
+      "avg_turnaround_time_hours": 49.0,
+      "output_per_berthday_tonnes": 16378.0,
+      "annual_traffic_thousand_tonnes": 42055.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "New Mangalore",
+      "avg_turnaround_time_hours": 46.21,
+      "output_per_berthday_tonnes": 18126.0,
+      "annual_traffic_thousand_tonnes": 42508.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "New Mangalore",
+      "avg_turnaround_time_hours": 45.63,
+      "output_per_berthday_tonnes": 15774.0,
+      "annual_traffic_thousand_tonnes": 39145.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "New Mangalore",
+      "avg_turnaround_time_hours": 45.89,
+      "output_per_berthday_tonnes": 15690.0,
+      "annual_traffic_thousand_tonnes": 36500.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "New Mangalore",
+      "avg_turnaround_time_hours": 45.99,
+      "output_per_berthday_tonnes": 16465.0,
+      "annual_traffic_thousand_tonnes": 39296.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "New Mangalore",
+      "avg_turnaround_time_hours": 43.09,
+      "output_per_berthday_tonnes": 18489.0,
+      "annual_traffic_thousand_tonnes": 41704.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "Paradip",
+      "avg_turnaround_time_hours": 79.48,
+      "output_per_berthday_tonnes": 24810.0,
+      "annual_traffic_thousand_tonnes": 102012.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "Paradip",
+      "avg_turnaround_time_hours": 60.35,
+      "output_per_berthday_tonnes": 26197.0,
+      "annual_traffic_thousand_tonnes": 109275.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "Paradip",
+      "avg_turnaround_time_hours": 56.1,
+      "output_per_berthday_tonnes": 25091.0,
+      "annual_traffic_thousand_tonnes": 112689.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "Paradip",
+      "avg_turnaround_time_hours": 58.1,
+      "output_per_berthday_tonnes": 23943.0,
+      "annual_traffic_thousand_tonnes": 114549.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "Paradip",
+      "avg_turnaround_time_hours": 53.16,
+      "output_per_berthday_tonnes": 27295.0,
+      "annual_traffic_thousand_tonnes": 116133.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "Paradip",
+      "avg_turnaround_time_hours": 46.27,
+      "output_per_berthday_tonnes": 31050.0,
+      "annual_traffic_thousand_tonnes": 135362.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "SMPA (HDC)",
+      "avg_turnaround_time_hours": 90.23,
+      "output_per_berthday_tonnes": 8343.0,
+      "annual_traffic_thousand_tonnes": 40501.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "SMPA (HDC)",
+      "avg_turnaround_time_hours": 72.95,
+      "output_per_berthday_tonnes": 9593.0,
+      "annual_traffic_thousand_tonnes": 45212.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "SMPA (HDC)",
+      "avg_turnaround_time_hours": 86.88,
+      "output_per_berthday_tonnes": 10121.0,
+      "annual_traffic_thousand_tonnes": 46680.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "SMPA (HDC)",
+      "avg_turnaround_time_hours": 74.16,
+      "output_per_berthday_tonnes": 9153.0,
+      "annual_traffic_thousand_tonnes": 45468.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "SMPA (HDC)",
+      "avg_turnaround_time_hours": 51.36,
+      "output_per_berthday_tonnes": 10428.0,
+      "annual_traffic_thousand_tonnes": 42877.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "SMPA (HDC)",
+      "avg_turnaround_time_hours": 50.8,
+      "output_per_berthday_tonnes": 11211.0,
+      "annual_traffic_thousand_tonnes": 48253.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "SMPA (KDS)",
+      "avg_turnaround_time_hours": 98.64,
+      "output_per_berthday_tonnes": 4132.0,
+      "annual_traffic_thousand_tonnes": 17390.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "SMPA (KDS)",
+      "avg_turnaround_time_hours": 92.08,
+      "output_per_berthday_tonnes": 4408.0,
+      "annual_traffic_thousand_tonnes": 18551.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "SMPA (KDS)",
+      "avg_turnaround_time_hours": 78.29,
+      "output_per_berthday_tonnes": 4215.0,
+      "annual_traffic_thousand_tonnes": 17303.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "SMPA (KDS)",
+      "avg_turnaround_time_hours": 76.22,
+      "output_per_berthday_tonnes": 3948.0,
+      "annual_traffic_thousand_tonnes": 15900.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "SMPA (KDS)",
+      "avg_turnaround_time_hours": 66.27,
+      "output_per_berthday_tonnes": 3968.0,
+      "annual_traffic_thousand_tonnes": 15298.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "SMPA (KDS)",
+      "avg_turnaround_time_hours": 55.68,
+      "output_per_berthday_tonnes": 4590.0,
+      "annual_traffic_thousand_tonnes": 17636.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "Visakhapatnam",
+      "avg_turnaround_time_hours": 62.0,
+      "output_per_berthday_tonnes": 13528.0,
+      "annual_traffic_thousand_tonnes": 63537.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "Visakhapatnam",
+      "avg_turnaround_time_hours": 60.22,
+      "output_per_berthday_tonnes": 13790.0,
+      "annual_traffic_thousand_tonnes": 65301.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "Visakhapatnam",
+      "avg_turnaround_time_hours": 58.27,
+      "output_per_berthday_tonnes": 14901.0,
+      "annual_traffic_thousand_tonnes": 72722.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "Visakhapatnam",
+      "avg_turnaround_time_hours": 66.09,
+      "output_per_berthday_tonnes": 12865.0,
+      "annual_traffic_thousand_tonnes": 69843.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "Visakhapatnam",
+      "avg_turnaround_time_hours": 73.83,
+      "output_per_berthday_tonnes": 11923.0,
+      "annual_traffic_thousand_tonnes": 69030.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "Visakhapatnam",
+      "avg_turnaround_time_hours": 73.19,
+      "output_per_berthday_tonnes": 12421.0,
+      "annual_traffic_thousand_tonnes": 73641.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2017-18",
+      "port_name": "VOCPA",
+      "avg_turnaround_time_hours": 64.56,
+      "output_per_berthday_tonnes": 11961.0,
+      "annual_traffic_thousand_tonnes": 36583.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2018-19",
+      "port_name": "VOCPA",
+      "avg_turnaround_time_hours": 47.04,
+      "output_per_berthday_tonnes": 15353.0,
+      "annual_traffic_thousand_tonnes": 34342.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2019-20",
+      "port_name": "VOCPA",
+      "avg_turnaround_time_hours": 44.88,
+      "output_per_berthday_tonnes": 15056.0,
+      "annual_traffic_thousand_tonnes": 36076.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2020-21",
+      "port_name": "VOCPA",
+      "avg_turnaround_time_hours": 46.08,
+      "output_per_berthday_tonnes": 15696.0,
+      "annual_traffic_thousand_tonnes": 31790.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2021-22",
+      "port_name": "VOCPA",
+      "avg_turnaround_time_hours": 48.48,
+      "output_per_berthday_tonnes": 16811.0,
+      "annual_traffic_thousand_tonnes": 34119.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    },
+    {
+      "financial_year": "2022-23",
+      "port_name": "VOCPA",
+      "avg_turnaround_time_hours": 46.8,
+      "output_per_berthday_tonnes": 15852.0,
+      "annual_traffic_thousand_tonnes": 38041.0,
+      "source": "PARLIAMENT_RAJYA_SABHA_AU_1426"
+    }
+  ],
+  "bunker_prices": [
+    {
+      "port_code": "SGSIN",
+      "fuel_grade": "VLSFO",
+      "price_usd_per_mt": 835.0,
+      "price_date": "2026-09-02"
+    },
+    {
+      "port_code": "SGSIN",
+      "fuel_grade": "MGO",
+      "price_usd_per_mt": 1450.0,
+      "price_date": "2026-09-02"
+    },
+    {
+      "port_code": "SGSIN",
+      "fuel_grade": "VLSFO",
+      "price_usd_per_mt": 919.0,
+      "price_date": "2026-09-18"
+    },
+    {
+      "port_code": "SGSIN",
+      "fuel_grade": "MGO",
+      "price_usd_per_mt": 1546.0,
+      "price_date": "2026-09-18"
+    },
+    {
+      "port_code": "AEFUJ",
+      "fuel_grade": "VLSFO",
+      "price_usd_per_mt": 810.0,
+      "price_date": "2026-09-18"
+    }
+  ],
+  "procurement_requirements": [
+    {
+      "requirement_code": "REQ-2026-BSL-HCC-01",
+      "plant_name": "Bokaro Steel Plant",
+      "cargo_type": "COKING_COAL",
+      "commodity_code": "HCC_MOATIZE",
+      "quantity_mt": 38000.0,
+      "origin_port": "MZBEW",
+      "destination_port": "INHAL",
+      "moisture_pct": 9.0,
+      "ash_content_pct": 10.5
+    },
+    {
+      "requirement_code": "REQ-2026-BSP-HCC-02",
+      "plant_name": "Bhilai Steel Plant",
+      "cargo_type": "COKING_COAL",
+      "commodity_code": "HCC_PEAK_DOWNS",
+      "quantity_mt": 75000.0,
+      "origin_port": "AUGLT",
+      "destination_port": "INPRT",
+      "moisture_pct": 9.5,
+      "ash_content_pct": 9.5
+    },
+    {
+      "requirement_code": "REQ-2026-RSP-HCC-03",
+      "plant_name": "Rourkela Steel Plant",
+      "cargo_type": "COKING_COAL",
+      "commodity_code": "HCC_HAY_POINT",
+      "quantity_mt": 150000.0,
+      "origin_port": "AUHPT",
+      "destination_port": "INVTZ",
+      "moisture_pct": 9.5,
+      "ash_content_pct": 9.0
+    }
+  ],
+  "fleet_master": [
+    {
+      "imo_number": "9183477",
+      "vessel_name": "GREAT SAILOR",
+      "vessel_class": "PANAMAX",
+      "dwt_mt": 75000.0,
+      "loa_m": 225.0,
+      "beam_m": 32.2,
+      "summer_draft_m": 14.2,
+      "build_year": 1999,
+      "flag_country": "Panama",
+      "is_verified": true
+    },
+    {
+      "imo_number": "8902436",
+      "vessel_name": "BAFRA",
+      "vessel_class": "HANDYMAX",
+      "dwt_mt": 45000.0,
+      "loa_m": 185.0,
+      "beam_m": 30.0,
+      "summer_draft_m": 11.5,
+      "build_year": 1990,
+      "flag_country": "Turkey",
+      "is_verified": true
+    },
+    {
+      "imo_number": "9100097",
+      "vessel_name": "VENERA",
+      "vessel_class": "SUPRAMAX",
+      "dwt_mt": 52000.0,
+      "loa_m": 190.0,
+      "beam_m": 32.2,
+      "summer_draft_m": 12.0,
+      "build_year": 1995,
+      "flag_country": "Panama",
+      "is_verified": true
+    },
+    {
+      "imo_number": "9558452",
+      "vessel_name": "HAN LINN",
+      "vessel_class": "CAPESIZE",
+      "dwt_mt": 180000.0,
+      "loa_m": 292.0,
+      "beam_m": 45.0,
+      "summer_draft_m": 18.1,
+      "build_year": 2010,
+      "flag_country": "Liberia",
+      "is_verified": true
+    }
+  ]
+}

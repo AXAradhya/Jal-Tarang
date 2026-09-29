@@ -1,0 +1,5 @@
+imo_number,vessel_name,vessel_class,dwt_mt,loa_m,beam_m,summer_draft_m,build_year,flag_country
+9183477,GREAT SAILOR,PANAMAX,75000,225.0,32.2,14.2,1999,Panama
+8902436,BAFRA,HANDYMAX,45000,185.0,30.0,11.5,1990,Turkey
+9100097,VENERA,SUPRAMAX,52000,190.0,32.2,12.0,1995,Panama
+9558452,HAN LINN,CAPESIZE,180000,292.0,45.0,18.1,2010,Liberia

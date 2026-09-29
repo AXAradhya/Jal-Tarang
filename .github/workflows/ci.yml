@@ -1,0 +1,65 @@
+name: SAIL MARINEX — Continuous Integration
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-build:
+    name: TypeCheck, Test & Build
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4
+        env:
+          POSTGRES_USER: sail_marinex
+          POSTGRES_PASSWORD: marinex_secure_pass
+          POSTGRES_DB: sail_marinex_db
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: redis:7.2-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: TypeScript Type Check (Strict)
+        run: npx tsc --noEmit
+
+      - name: Run Automated Test Suite (Vitest)
+        run: npx vitest run
+        env:
+          DATABASE_URL: postgresql://sail_marinex:marinex_secure_pass@localhost:5432/sail_marinex_db
+          REDIS_URL: redis://localhost:6379
+
+      - name: Build TypeScript to Production JS
+        run: npm run build
+
+      - name: Verify Docker Container Build
+        run: docker build -t sail-marinex-backend:latest .

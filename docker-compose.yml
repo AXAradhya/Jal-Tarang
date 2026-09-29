@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: sail_marinex_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sail_marinex
+      POSTGRES_PASSWORD: marinex_secure_pass
+      POSTGRES_DB: sail_marinex_db
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./scripts/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
+      - ./scripts/schema_extended.sql:/docker-entrypoint-initdb.d/02_schema_extended.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sail_marinex -d sail_marinex_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7.2-alpine
+    container_name: sail_marinex_redis
+    restart: unless-stopped
+    command: redis-server --requirepass redis_secure_pass
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "redis_secure_pass", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sail_marinex_backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=8000
+      - DATABASE_URL=postgresql://sail_marinex:marinex_secure_pass@postgres:5432/sail_marinex_db
+      - REDIS_URL=redis://:redis_secure_pass@redis:6379/0
+    ports:
+      - "8000:8000"
+
+  ml-service:
+    build: ./ml-service
+    container_name: sail_marinex_ml_service
+    restart: unless-stopped
+    ports:
+      - "8001:8000"
+    environment:
+      - PORT=8000
+      - DATABASE_URL=postgresql://sail_marinex:marinex_secure_pass@postgres:5432/sail_marinex_db
+      - REDIS_URL=redis://:redis_secure_pass@redis:6379/1
+      - NODE_BACKEND_URL=http://backend:8000
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./ml-service:/app
+      - model-artifacts:/app/models_store
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.15.0
+    container_name: sail_marinex_mlflow
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - BACKEND_STORE_URI=postgresql://sail_marinex:marinex_secure_pass@postgres:5432/sail_marinex_db
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+    name: sail_marinex_pgdata
+  redisdata:
+    name: sail_marinex_redisdata
+  model-artifacts:
+    name: sail_marinex_model_artifacts
+

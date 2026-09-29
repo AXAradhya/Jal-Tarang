@@ -1,0 +1,279 @@
+[
+  {
+    "id": "scn-611269",
+    "code": "SCEN-TEST-1252",
+    "name": "Q4 Cape Fuel Spike Simulation",
+    "description": "Test stress simulation on Capesize bunker price shock",
+    "scenario_type": "FUEL_SPIKE",
+    "parameters": {
+      "multiplier": 1.25
+    },
+    "status": "READY",
+    "created_by": null,
+    "created_by_email": "aditya.sharma@sail.in",
+    "created_at": "2026-09-29T11:00:11.269Z"
+  },
+  {
+    "id": "scn-616156",
+    "code": "MONSOON_PARADEEP_6155",
+    "name": "Monsoon Heavy Swell & Paradeep Lockout",
+    "description": "Bay of Bengal deep depression forces 9-day suspension of anchorage discharge operations at Paradip & Dhamra.",
+    "scenario_type": "WEATHER_CYCLONE",
+    "parameters": {
+      "congestionDelayDays": 9,
+      "demurrageDailyRateUsd": 28500,
+      "fuelShockPct": 10,
+      "detourDays": 0,
+      "freightShockPct": 15,
+      "exchangeRateShockPct": 3,
+      "carbonTaxPerMt": 0,
+      "targetPort": "INPRT",
+      "vesselClass": "Capesize",
+      "cargoQuantityMt": 160000
+    },
+    "status": "READY",
+    "created_by": null,
+    "created_by_email": "aditya.sharma@sail.in",
+    "created_at": "2026-09-20T15:20:16.156Z"
+  },
+  {
+    "id": "scn-365101",
+    "code": "SCEN-5101",
+    "name": "Panama Canal Drought Surcharge",
+    "description": "Draft restrictions reduce vessel throughput by 35%",
+    "scenario_type": "CANAL_RESTRICTION",
+    "parameters": {
+      "congestionDelayDays": 6,
+      "detourDays": 14,
+      "demurrageDailyRateUsd": 24000,
+      "fuelShockPct": 20,
+      "freightShockPct": 35
+    },
+    "status": "READY",
+    "created_by": null,
+    "created_by_email": "aditya.sharma@sail.in",
+    "created_at": "2026-09-20T15:16:05.101Z"
+  },
+  {
+    "id": "scn-303113",
+    "code": "SCEN-3113",
+    "name": "Monsoon Port Congestion Test",
+    "description": "Testing monsoon congestion and freight surge",
+    "scenario_type": "CUSTOM",
+    "parameters": {},
+    "status": "READY",
+    "created_by": null,
+    "created_by_email": "aditya.sharma@sail.in",
+    "created_at": "2026-09-20T15:15:03.113Z"
+  },
+  {
+    "id": "scn-001",
+    "code": "BASE_CASE",
+    "name": "Base Operating Conditions (Status Quo)",
+    "scenario_type": "BASE_CASE",
+    "description": "Normal sailing schedules, standard berth turnaround times, and stable benchmark bunker spreads.",
+    "parameters": {
+      "freightMultiplier": 1,
+      "freightShockPct": 0,
+      "congestionDelayDays": 0,
+      "detourDays": 0,
+      "bunkerMultiplier": 1,
+      "fuelShockPct": 0,
+      "demurrageDailyRateUsd": 18500,
+      "exchangeRateShockPct": 0,
+      "carbonTaxPerMt": 0,
+      "targetPort": "ALL"
+    },
+    "created_by_email": "aditya.sharma@sail.in",
+    "created_at": "2026-08-01T00:00:00Z"
+  },
+  {
+    "id": "scn-002",
+    "code": "BAY_OF_BENGAL_CYCLONE",
+    "name": "Bay of Bengal Cyclone & Monsoon Surge (Signal 8)",
+    "scenario_type": "WEATHER_CYCLONE",
+    "description": "Tropical cyclone shuts Paradip and Dhamra outer anchorage for 6 days with zero pilotage.",
+    "parameters": {
+      "freightMultiplier": 1.15,
+      "freightShockPct": 15,
+      "congestionDelayDays": 6,
+      "detourDays": 1,
+      "bunkerMultiplier": 1.08,
+      "fuelShockPct": 8,
+      "demurrageDailyRateUsd": 22000,
+      "exchangeRateShockPct": 0,
+      "carbonTaxPerMt": 0,
+      "targetPort": "INPAV"
+    },
+    "created_by_email": "rajesh.kumar@sail.in",
+    "created_at": "2026-08-15T10:00:00Z"
+  },
+  {
+    "id": "scn-003",
+    "code": "GLOBAL_BUNKER_SHOCK",
+    "name": "Global Bunker Fuel Price Shock (+30% VLSFO)",
+    "scenario_type": "FUEL_SPIKE",
+    "description": "VLSFO spikes from $620 to $806/MT following geopolitical refinery bottlenecks and crude escalation.",
+    "parameters": {
+      "freightMultiplier": 1.22,
+      "freightShockPct": 22,
+      "congestionDelayDays": 0,
+      "detourDays": 0,
+      "bunkerMultiplier": 1.3,
+      "fuelShockPct": 30,
+      "demurrageDailyRateUsd": 18500,
+      "exchangeRateShockPct": 2,
+      "carbonTaxPerMt": 0,
+      "targetPort": "ALL"
+    },
+    "created_by_email": "priya.mehta@sail.in",
+    "created_at": "2026-09-01T12:00:00Z"
+  },
+  {
+    "id": "scn-004",
+    "code": "SUEZ_RED_SEA_DETOUR",
+    "name": "Red Sea / Suez Closure: Cape of Good Hope Detour",
+    "scenario_type": "CANAL_CLOSURE",
+    "description": "Geopolitical closure of Bab-el-Mandeb forces US/Atlantic shipments to detour around South Africa (+14 days).",
+    "parameters": {
+      "freightMultiplier": 1.38,
+      "freightShockPct": 38,
+      "congestionDelayDays": 2,
+      "detourDays": 14,
+      "bunkerMultiplier": 1.25,
+      "fuelShockPct": 25,
+      "demurrageDailyRateUsd": 25000,
+      "exchangeRateShockPct": 3,
+      "carbonTaxPerMt": 0,
+      "targetPort": "INVTZ"
+    },
+    "created_by_email": "aditya.sharma@sail.in",
+    "created_at": "2026-09-05T14:30:00Z"
+  },
+  {
+    "id": "scn-005",
+    "code": "PARADIP_PORT_CONGESTION",
+    "name": "Paradip Terminal 2 Pre-berthing Congestion Surge",
+    "scenario_type": "PORT_CONGESTION",
+    "description": "Heavy rake shortage and mechanical conveyor outage leads to 9-day vessel queuing at Paradip Port.",
+    "parameters": {
+      "freightMultiplier": 1.08,
+      "freightShockPct": 8,
+      "congestionDelayDays": 9,
+      "detourDays": 0,
+      "bunkerMultiplier": 1.02,
+      "fuelShockPct": 2,
+      "demurrageDailyRateUsd": 26000,
+      "exchangeRateShockPct": 0,
+      "carbonTaxPerMt": 0,
+      "targetPort": "INPAV"
+    },
+    "created_by_email": "sunil.mohanty@sail.in",
+    "created_at": "2026-09-08T09:15:00Z"
+  },
+  {
+    "id": "scn-006",
+    "code": "CAPESIZE_SPOT_SURGE",
+    "name": "Baltic Capesize Spot Freight Index Surge (+45%)",
+    "scenario_type": "FREIGHT_SURGE",
+    "description": "Massive Atlantic mineral chartering squeeze drives C5 and Tubarao spot fixtures up 45%.",
+    "parameters": {
+      "freightMultiplier": 1.45,
+      "freightShockPct": 45,
+      "congestionDelayDays": 1,
+      "detourDays": 0,
+      "bunkerMultiplier": 1.1,
+      "fuelShockPct": 10,
+      "demurrageDailyRateUsd": 32000,
+      "exchangeRateShockPct": 1,
+      "carbonTaxPerMt": 0,
+      "targetPort": "ALL"
+    },
+    "created_by_email": "amit.verma@sail.in",
+    "created_at": "2026-09-10T16:45:00Z"
+  },
+  {
+    "id": "scn-007",
+    "code": "AUSTRALIA_EXPORT_TARIFF",
+    "name": "Australian Met Coal Carbon Levy & Export Duty",
+    "scenario_type": "GEOPOLITICAL_TARIFF",
+    "description": "Queensland green royalty hike increases export mineral duties on Gladstone/Hay Point coking coal shipments.",
+    "parameters": {
+      "freightMultiplier": 1.12,
+      "freightShockPct": 12,
+      "congestionDelayDays": 2,
+      "detourDays": 0,
+      "bunkerMultiplier": 1.05,
+      "fuelShockPct": 5,
+      "demurrageDailyRateUsd": 19000,
+      "exchangeRateShockPct": 0,
+      "carbonTaxPerMt": 12.5,
+      "targetPort": "INVTZ"
+    },
+    "created_by_email": "priya.mehta@sail.in",
+    "created_at": "2026-09-12T11:20:00Z"
+  },
+  {
+    "id": "scn-008",
+    "code": "USD_INR_DEVALUATION",
+    "name": "Macro Currency Shock: Rupee Devaluation to ₹105/USD",
+    "scenario_type": "CURRENCY_SHOCK",
+    "description": "Federal Reserve hawkish rate policy drives USD/INR from ₹95.88 to ₹105.00 (+9.5% landed procurement cost).",
+    "parameters": {
+      "freightMultiplier": 1,
+      "freightShockPct": 0,
+      "congestionDelayDays": 0,
+      "detourDays": 0,
+      "bunkerMultiplier": 1,
+      "fuelShockPct": 0,
+      "demurrageDailyRateUsd": 18500,
+      "exchangeRateShockPct": 9.5,
+      "carbonTaxPerMt": 0,
+      "targetPort": "ALL"
+    },
+    "created_by_email": "deepak.sen@sail.in",
+    "created_at": "2026-09-14T08:00:00Z"
+  },
+  {
+    "id": "scn-009",
+    "code": "IMO_EU_ETS_CARBON_TAX",
+    "name": "IMO 2026 Maritime Carbon Intensity Tax ($25/MT)",
+    "scenario_type": "CARBON_TAX",
+    "description": "Global environmental carbon intensity levy implemented across international bulk carrier voyages.",
+    "parameters": {
+      "freightMultiplier": 1.1,
+      "freightShockPct": 10,
+      "congestionDelayDays": 0,
+      "detourDays": 0,
+      "bunkerMultiplier": 1.05,
+      "fuelShockPct": 5,
+      "demurrageDailyRateUsd": 18500,
+      "exchangeRateShockPct": 0,
+      "carbonTaxPerMt": 25,
+      "targetPort": "ALL"
+    },
+    "created_by_email": "aditya.sharma@sail.in",
+    "created_at": "2026-09-15T13:30:00Z"
+  },
+  {
+    "id": "scn-010",
+    "code": "QUEENSLAND_MINE_FORCE_MAJEURE",
+    "name": "Bowen Basin Cyclone Flooding & DBCT Force Majeure",
+    "scenario_type": "FORCE_MAJEURE",
+    "description": "Heavy precipitation halts Queensland coal rail network, triggering 12-day berthing delays at DBCT.",
+    "parameters": {
+      "freightMultiplier": 1.25,
+      "freightShockPct": 25,
+      "congestionDelayDays": 12,
+      "detourDays": 2,
+      "bunkerMultiplier": 1.15,
+      "fuelShockPct": 15,
+      "demurrageDailyRateUsd": 28000,
+      "exchangeRateShockPct": 2,
+      "carbonTaxPerMt": 0,
+      "targetPort": "INHAL"
+    },
+    "created_by_email": "rajesh.kumar@sail.in",
+    "created_at": "2026-09-16T15:00:00Z"
+  }
+]
