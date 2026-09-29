@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const apiClient = axios.create({
-  baseURL: '/api/v1',
+  baseURL: (typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_URL) || '/api/v1',
   timeout: 30_000,
   headers: {
     'Content-Type': 'application/json',
@@ -31,7 +31,15 @@ const processQueue = (error: any, token: string | null = null) => {
 
 // Response interceptor: auto-refresh expired access tokens & redirect on unauthorized
 apiClient.interceptors.response.use(
-  (res) => res,
+  (res) => {
+    // If Vercel or a static host rewrites API routes to index.html, reject so callers handle fallback
+    if (typeof res.data === 'string' && (res.data.includes('<!DOCTYPE html') || res.data.includes('<!doctype html>'))) {
+      const err: any = new Error('API server returned HTML page instead of JSON. Ensure backend is running or API proxy is configured.');
+      err.response = { status: 404, data: { error: { message: err.message } } };
+      return Promise.reject(err);
+    }
+    return res;
+  },
   async (err) => {
     const originalRequest = err.config;
     if (err.response?.status === 401 && originalRequest && !originalRequest._retry) {

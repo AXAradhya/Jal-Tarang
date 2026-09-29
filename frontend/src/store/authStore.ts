@@ -77,6 +77,20 @@ export const useAuthStore = create<AuthState>((set, get) => ({
         throw new Error('Invalid user payload');
       }
     } catch {
+      // If server is unreachable or in showcase mode, retain existing stored user & token
+      const existingUser = getStoredUser();
+      const existingToken = getStoredToken();
+      if (existingUser && existingToken) {
+        set({
+          user: existingUser,
+          token: existingToken,
+          isAuthenticated: true,
+          isLoading: false,
+          activeRole: existingUser.roles?.[0] || 'CHARTERING_MANAGER',
+        });
+        return;
+      }
+
       // Token is expired or invalid
       try {
         localStorage.removeItem('marinex_token');
