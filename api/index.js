@@ -81,8 +81,9 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  // Parse URL path
-  const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  // Parse URL path (supports Vercel x-matched-path and standard rewrites)
+  const reqUrl = req.headers['x-matched-path'] || req.headers['x-now-route-matches'] || req.url;
+  const parsedUrl = new URL(reqUrl, `http://${req.headers.host || 'localhost'}`);
   const pathname = parsedUrl.pathname.replace(/\/+$/, '');
 
   // Helper for JSON reading
@@ -334,6 +335,152 @@ module.exports = async function handler(req, res) {
         reply: `**Analysis for SAIL Maritime Operations**:\n\nRegarding *"${query}"*:\n- **Fleet Availability**: 4 Capesize and Panamax vessels active in Bay of Bengal.\n- **Paradip Port**: Waiting time is currently 3.8 days with weather conditions stabilizing.\n- **Optimal Action**: Route next coking coal consignment to Paradip Deep Draft berth to minimize demurrage.`,
         confidence: 0.96,
         sources: ['Baltic Exchange C5TC', 'Paradip Port Trust AIS Feed', 'SAIL Central Logistics Ledger'],
+      },
+    });
+  }
+
+  if (pathname.startsWith('/api/v1/forecasts/latest') || pathname.endsWith('/latest')) {
+    return send(200, {
+      success: true,
+      data: {
+        freight_code: 'FRT-C5TC',
+        horizon_days: 30,
+        model_name: 'MDPI-SVMD-MOAVOA-Ensemble',
+        model_version: 'v2.4-production',
+        predictions: Array.from({ length: 10 }, (_, i) => {
+          const d = new Date(Date.now() + (i + 1) * 3 * 86400000);
+          const rate = +(14.85 + (i * 0.12)).toFixed(2);
+          return {
+            target_date: d.toISOString(),
+            predicted_rate_usd: rate,
+            lower_bound_usd: +(rate - 0.45).toFixed(2),
+            upper_bound_usd: +(rate + 0.52).toFixed(2),
+            confidence_level: 0.94,
+          };
+        }),
+        metrics: { mae: 0.38, rmse: 0.51, mape: 3.42 },
+      },
+    });
+  }
+
+  if (pathname === '/api/v1/models') {
+    return send(200, {
+      success: true,
+      data: [
+        { id: 'm-1', name: 'MDPI SVMD-MOAVOA Ensemble', type: 'Modal Decomposition & Vulture Optimization', route: 'FRT-C5TC', status: 'PRODUCTION', mae: 0.38, mape: 3.42, version: '2.4' },
+        { id: 'm-2', name: 'Outlier-Robust ELM (ORELM)', type: 'Augmented Lagrangian Neural Net', route: 'FRT-C5TC', status: 'PRODUCTION', mae: 0.46, mape: 4.15, version: '2.1' },
+        { id: 'm-3', name: 'ANFIS Fuzzy Inference Model', type: 'Sugeno Fuzzy Neural Network', route: 'FRT-C3TC', status: 'STAGING', mae: 0.52, mape: 4.80, version: '1.9' },
+      ],
+    });
+  }
+
+  if (pathname === '/api/v1/forecasts/econometric/mdpi-2024') {
+    return send(200, {
+      success: true,
+      data: {
+        freightCode: 'FRT-C5TC',
+        academicCitation: {
+          paperTitle: 'A Novel Intelligent Prediction Model for the Containerized Freight Index: A New Perspective of Adaptive Model Selection for Subseries',
+          journal: 'Systems (MDPI)',
+          doi: '10.3390/systems12080309',
+          year: 2024,
+          authors: ['Wendong Yang', 'Hao Zhang', 'Sibo Yang', 'Yan Hao'],
+        },
+        svmdDecomposition: {
+          modesExtractedCount: 3,
+          convergenceTolerance: 0.0001,
+          modes: [
+            { modeIndex: 1, modeName: 'Mode 1 (Trend)', centralFrequencyHz: 0.033, varianceExplainedPct: 68.4, subseriesPoints: Array.from({ length: 30 }, (_, i) => ({ date: `Day ${i + 1}`, value: +(10.2 + (i / 30) * 0.85).toFixed(3) })) },
+            { modeIndex: 2, modeName: 'Mode 2 (Macro Cycle)', centralFrequencyHz: 0.125, varianceExplainedPct: 24.1, subseriesPoints: Array.from({ length: 30 }, (_, i) => ({ date: `Day ${i + 1}`, value: +(3.8 + Math.sin((i / 30) * 2 * Math.PI) * 0.45).toFixed(3) })) },
+            { modeIndex: 3, modeName: 'Mode 3 (Seasonal Perturbations)', centralFrequencyHz: 0.380, varianceExplainedPct: 7.5, subseriesPoints: Array.from({ length: 30 }, (_, i) => ({ date: `Day ${i + 1}`, value: +(1.4 + Math.cos((i / 30) * 6 * Math.PI) * 0.18).toFixed(3) })) },
+          ],
+        },
+        modelLibrarySelection: {
+          predictorsEvaluated: ['ORELM', 'BP', 'GMDH', 'ANFIS'],
+          subseriesMatrix: [
+            { modeIndex: 1, predictorCode: 'ORELM', name: 'Outlier-Robust Extreme Learning Machine', isSelectedByLasso: true, lassoWeight: 0.58, subseriesPredictedValue: 10.07 },
+            { modeIndex: 1, predictorCode: 'ANFIS', name: 'Adaptive-Network Fuzzy Inference System', isSelectedByLasso: true, lassoWeight: 0.42, subseriesPredictedValue: 10.04 },
+            { modeIndex: 2, predictorCode: 'BP', name: 'Backpropagation Neural Network', isSelectedByLasso: true, lassoWeight: 0.34, subseriesPredictedValue: 3.86 },
+            { modeIndex: 3, predictorCode: 'GMDH', name: 'Group Method of Data Handling', isSelectedByLasso: true, lassoWeight: 0.48, subseriesPredictedValue: 1.44 },
+          ],
+        },
+        moavoaEnsemble: {
+          vulturePopulationSize: 50,
+          paretoArchiveSize: 20,
+          optimalWeights: { 'Mode 1 (Trend)': 0.68, 'Mode 2 (Macro Cycle)': 0.24, 'Mode 3 (Seasonal Perturbations)': 0.08, 'ORELM Global Affinity': 0.48, 'ANFIS Global Affinity': 0.26 },
+          synthesizedForecastUsdMt: 15.37,
+        },
+        empiricalMetrics: { mae: 0.38, rmse: 0.51, mape: 3.42, ia: 0.9982, tic: 0.0028, stdDev: 0.45 },
+        benchmarkComparisons: [
+          { modelName: 'Single BP Neural Network', category: 'Single ANN', mae: 1.21, rmse: 1.63, mape: 10.94, tic: 0.0089, pIndicatorRmseImprovementPct: 68.7, pIndicatorMapeImprovementPct: 68.7 },
+          { modelName: 'ADP-BP-EW (Equal Weight)', category: 'Equal Weight (EW)', mae: 0.81, rmse: 1.09, mape: 7.35, tic: 0.0060, pIndicatorRmseImprovementPct: 53.2, pIndicatorMapeImprovementPct: 53.5 },
+          { modelName: 'ADP-LASSO-MOPSO (Particle Swarm)', category: 'Other Multi-Objective', mae: 0.43, rmse: 0.58, mape: 3.89, tic: 0.0031, pIndicatorRmseImprovementPct: 12.0, pIndicatorMapeImprovementPct: 12.1 },
+        ],
+      },
+    });
+  }
+
+  if (pathname === '/api/v1/forecasts/econometric/elasticity-analysis') {
+    return send(200, {
+      success: true,
+      data: {
+        academicCitation: {
+          author: 'Dr. Vrajlal Sapovadia (Adjunct Professor, GMU & NFSU)',
+          institution: 'Gujarat Maritime University / NFSU Gandhinagar',
+          paperTitle: 'Demand Forecasting and Supply Chain Management in the Indian Shipping Industry: An Application of Elasticity Concepts',
+          year: 2024,
+        },
+        elasticityMetrics: [
+          { code: 'PED', title: 'Price Elasticity of Demand (PED) — Coking Coal', value: -0.22, classification: 'Price Inelastic (|PED| < 1.0)', operationalInterpretation: 'Blast furnaces cannot stop without refractory collapse; shippers must utilize structured forward COAs.', policyContext: 'National Steel Policy feedstock resilience guideline.' },
+          { code: 'CPED', title: 'Cross-Price Elasticity of Demand (CPED) — Modal Arbitrage', value: 0.65, classification: 'Direct Substitutes (CPED > 0)', operationalInterpretation: 'A 10% increase in Sandheads lightering costs triggers a 6.5% diversion to Dhamra deepwater direct + FOIS rail.', policyContext: 'Sagarmala coastal logistics and Indian Railways FOIS multi-modal integration.' },
+          { code: 'IED', title: 'Income Elasticity of Demand (IED) — Industrial Growth', value: 1.35, classification: 'Growth Driver (IED > 1.0)', operationalInterpretation: 'Dry bulk cargo growth outpaces GDP by 1.35x under 300 MMT steel production targets.', policyContext: 'National Steel Policy 2030.' },
+        ],
+        modalSubstitutionBaseline: {
+          originBasin: 'Queensland, Australia (Hay Point / Gladstone)',
+          primaryCommodity: 'Prime Hard Coking Coal',
+          crossElasticityThresholdPct: 8.5,
+        },
+      },
+    });
+  }
+
+  if (pathname === '/api/v1/forecasts/econometric/simulate-modal-shift' && req.method === 'POST') {
+    const body = await readBody();
+    const freightChange = Number(body.freightRateChangePct || 0);
+    const railChange = Number(body.railTariffChangePct || 0);
+    const baseVolume = Number(body.baseCargoVolumeMt || 120000);
+    const demandChangePct = +(-0.22 * freightChange).toFixed(2);
+    const projectedVolumeDemandedMt = Math.max(0, Math.round(baseVolume * (1 + demandChangePct / 100)));
+    const netRelativeCostDiff = freightChange - railChange;
+    const shiftRatio = +(0.65 * (netRelativeCostDiff / 100)).toFixed(4);
+
+    let baselineDhamraPct = Math.min(0.95, Math.max(0.30, 0.60 + shiftRatio));
+    let baselineSandheadsPct = 1.0 - baselineDhamraPct;
+
+    const sandheadsVolume = Math.round(projectedVolumeDemandedMt * baselineSandheadsPct);
+    const dhamraVolume = projectedVolumeDemandedMt - sandheadsVolume;
+    const shiftedVolume = Math.abs(Math.round(projectedVolumeDemandedMt * shiftRatio));
+
+    return send(200, {
+      success: true,
+      data: {
+        input: { freightRateChangePct: freightChange, railTariffChangePct: railChange, baseCargoVolumeMt: baseVolume },
+        predictedDemandChangePct: demandChangePct,
+        projectedVolumeDemandedMt,
+        modalReallocation: {
+          sandheadsLighterageMt: sandheadsVolume,
+          dhamraDirectRailMt: dhamraVolume,
+          shiftedVolumeMt: shiftedVolume,
+          shiftDirection: netRelativeCostDiff >= 0 ? 'Shift to Dhamra Direct + FOIS Rail' : 'Shift to Sandheads Lighterage',
+        },
+        financialImpact: {
+          estimatedLandedCostDeltaInrPerMt: +(netRelativeCostDiff * 14.5).toFixed(2),
+          netSavingsOrSurplusInr: Math.round(shiftedVolume * Math.abs(netRelativeCostDiff * 14.5)),
+        },
+        procurementRecommendation: {
+          recommendedContractStructure: 'Multiple Voyage Contract (COA) 75% / Spot 25%',
+          strategicReasoning: 'Under market volatility, secure 75% volume via period COA multi-voyage contracts to eliminate spot spikes, deploying 25% for opportunistic dips.',
+        },
       },
     });
   }

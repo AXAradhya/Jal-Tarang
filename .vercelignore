@@ -15,3 +15,5 @@ tests/
 .docs/
 .system_generated/
 scripts/
+pnpm-lock.yaml
+pnpm-workspace.yaml
