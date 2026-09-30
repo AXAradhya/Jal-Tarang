@@ -57,6 +57,9 @@ jobs:
         env:
           DATABASE_URL: postgresql://sail_marinex:marinex_secure_pass@localhost:5432/sail_marinex_db
           REDIS_URL: redis://localhost:6379
+          JWT_SECRET: sail_marinex_super_secure_jwt_secret_key_change_in_prod_2026_min_32_chars
+          NODE_ENV: test
+          APP_ENV: test
 
       - name: Build TypeScript to Production JS
         run: npm run build

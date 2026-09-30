@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { REAL_PORTS } from '../src/db/enterprise_fallback_dataset.js';
-import { mlServiceClient } from '../src/services/mlServiceClient.js';
+import { mlServiceClient } from '../src/services/MlServiceClient.js';
 
 describe('SAIL Specification Feature Suite', () => {
   describe('Port Infrastructure Constraint Catalog (FR-004 & Section 0.3)', () => {

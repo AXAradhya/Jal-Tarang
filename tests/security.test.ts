@@ -2,8 +2,13 @@ import { describe, it, expect, beforeAll } from 'vitest';
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto';
 import { config } from '../src/config/index.js';
+import { ensureTestServerRunning } from './testServerHelper.js';
 
 describe('SAIL MARINEX — Comprehensive Security & Reliability Audit Suite', () => {
+  beforeAll(async () => {
+    await ensureTestServerRunning();
+  });
+
   const mockOrgId = 'org-sail-corp';
   const otherOrgId = 'org-competitor-corp';
 

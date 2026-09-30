@@ -1,8 +1,9 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import { VesselFeasibilityService } from '../src/services/VesselFeasibilityService.js';
 import { VoyageEconomicsService } from '../src/services/VoyageEconomicsService.js';
 import { JobQueueService } from '../src/services/JobQueueService.js';
 import { FreightCodeService } from '../src/services/FreightCodeService.js';
+import { ensureTestServerRunning } from './testServerHelper.js';
 import Decimal from 'decimal.js';
 
 describe('SAIL MARINEX — Chaos & Extreme Boundary Input Tests', () => {
@@ -127,6 +128,10 @@ describe('SAIL MARINEX — Chaos & Extreme Boundary Input Tests', () => {
   });
 
   describe('HTTP Chaos & Security Endpoint Hardening', () => {
+    beforeAll(async () => {
+      await ensureTestServerRunning();
+    });
+
     it('should reject 50,000-character search queries with HTTP 400 QUERY_TOO_LONG', async () => {
       const hugeSearch = 'A'.repeat(5000);
       const resp = await fetch(`http://localhost:8000/api/v1/search?q=${hugeSearch}`, {

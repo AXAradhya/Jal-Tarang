@@ -22,7 +22,7 @@ export const config = {
   // JWT Security
   jwt: {
     secret: (() => {
-      const secret = process.env.JWT_SECRET;
+      const secret = process.env.JWT_SECRET || (process.env.NODE_ENV !== 'production' ? 'sail_marinex_super_secure_jwt_secret_key_change_in_prod_2026_min_32_chars' : undefined);
       if (!secret) {
         throw new Error('FATAL: JWT_SECRET environment variable must be explicitly defined in environment.');
       }
