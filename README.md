@@ -18,7 +18,7 @@
 
 > **"Transforming India's Maritime Bulk Procurement from Reactive Spot Fixing to Algorithmic, Predictive & Multi-Voyage Strategic Optimization."**
 
-[Explore Live Architecture](#-system-architecture) • [Core Clauses Solved](#-statutory-sih26006-clauses-solved) • [Role Dashboards](#-interactive-role-based-dashboards) • [Quickstart Guide](#-quickstart--deployment) • [Team Cloud 9](#-team-cloud-9)
+[Explore Live Architecture](#-system-architecture) • [Commercial Business Model](BUSINESS.md) • [Core Clauses Solved](#-statutory-sih26006-clauses-solved) • [Role Dashboards](#-interactive-role-based-dashboards) • [Quickstart Guide](#-quickstart--deployment) • [Team Cloud 9](#-team-cloud-9)
 
 </div>
 
