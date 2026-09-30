@@ -87,7 +87,8 @@ JAL TARANG is architected around the four statutory mandates specified by the **
 - **MAPE Benchmark Compliance:** Backtested mean absolute percentage error (MAPE) consistently **$\le 3.8\%$** on 30-day forward predictions.
 
 ### 2. Clause (b) — Vessel–Port Matching & Hydrodynamic Constraints
-- **In-Scope Ports Catalog (FR-004):** Comprehensive constraints for Indian receiving ports (**Paradip, Visakhapatnam, Dhamra, Haldia, Sagar / Sandheads Anchorage, Gopalpur**) and overseas loading ports (**Hay Point, Gladstone, Baltimore, Hampton Roads, Nacala, Beira, Vanino, Vostochny, Samarinda**).
+- **In-Scope Ports Catalog (FR-004):** Comprehensive constraints for Indian receiving ports (**Paradip, Visakhapatnam, Gangavaram, Gopalpur, Dhamra, Sagar / Sandheads Anchorage, Haldia**) and overseas loading ports (**Hay Point, Gladstone, Baltimore, Hampton Roads, Nacala, Beira, Vanino, Vostochny, Samarinda**).
+- **Vessel Class Optimization:** Evaluates **Handysize (15k–35k DWT), Supramax (50k–60k DWT), Panamax (65k–85k DWT), and Capesize (120k–200k DWT)** vessels against cargo parcel sizes and port barriers to maximize stowage factor and eliminate deadweight freight penalties.
 - **Physical Barrier Checking:** Instant validation of Maximum Length Overall (LOA), Beam, Arrival Draft, Deadweight Tonnage (DWT), and Shore Unloader grab outreach.
 - **Hooghly Estuary Tidal Draft Engine:** 37-constituent astronomical tidal harmonic model with hydrodynamic squat calculations to determine exact high-water clearance windows for Haldia Dock Complex.
 - **Lighterage vs. Rail Arbitrage Engine:** Evaluates ocean transshipment at Sandheads deep anchorage against direct discharge at Dhamra paired with Indian Railways FOIS rake freight.
