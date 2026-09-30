@@ -119,6 +119,27 @@ export const forecastApi = {
     const { data } = await apiClient.post<ApiResponse<any>>('/forecasts/trigger', payload);
     return data.data;
   },
+
+  getMdpiEconometric: async (freightCode: string = 'FRT-C5TC', baseRateUsd?: number) => {
+    const { data } = await apiClient.get<ApiResponse<any>>('/forecasts/econometric/mdpi-2024', {
+      params: { freightCode, baseRateUsd },
+    });
+    return data.data;
+  },
+
+  getElasticityAnalysis: async () => {
+    const { data } = await apiClient.get<ApiResponse<any>>('/forecasts/econometric/elasticity-analysis');
+    return data.data;
+  },
+
+  simulateModalShift: async (payload: {
+    freightRateChangePct: number;
+    railTariffChangePct?: number;
+    baseCargoVolumeMt?: number;
+  }) => {
+    const { data } = await apiClient.post<ApiResponse<any>>('/forecasts/econometric/simulate-modal-shift', payload);
+    return data.data;
+  },
 };
 
 export const contractApi = {

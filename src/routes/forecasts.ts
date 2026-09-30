@@ -8,6 +8,8 @@ import { pool } from '../db/index.js';
 import { authenticateToken, requireRole } from '../middleware/auth.js';
 import { SystemRole } from '../types/index.js';
 import { mlServiceClient } from '../services/MlServiceClient.js';
+import { MdpiEconometricService } from '../services/forecasting/MdpiEconometricService.js';
+import { MaritimeElasticityService } from '../services/forecasting/MaritimeElasticityService.js';
 
 const router = Router();
 
@@ -107,6 +109,38 @@ const getLatestForecastHandler = async (req: Request, res: Response) => {
 
 router.get('/latest/:freightCodeId', authenticateToken, getLatestForecastHandler);
 router.get('/:freightCodeId/latest', authenticateToken, getLatestForecastHandler);
+
+// GET /api/v1/forecasts/econometric/mdpi-2024 - MDPI Systems 2024 Decomposition-Ensemble Model
+router.get('/econometric/mdpi-2024', authenticateToken, async (req: Request, res: Response) => {
+  try {
+    const freightCode = (req.query.freightCode as string) || 'FRT-C5TC';
+    const baseRateUsd = req.query.baseRateUsd ? Number(req.query.baseRateUsd) : 14.85;
+    const result = MdpiEconometricService.runDecompositionEnsemble(freightCode, baseRateUsd);
+    return res.json({ success: true, data: result });
+  } catch (err: any) {
+    return res.status(500).json({ success: false, error: { code: 'MDPI_ECONOMETRIC_ERROR', message: err.message } });
+  }
+});
+
+// GET /api/v1/forecasts/econometric/elasticity-analysis - Dr. Sapovadia Maritime Elasticity Analysis
+router.get('/econometric/elasticity-analysis', authenticateToken, async (_req: Request, res: Response) => {
+  try {
+    const result = MaritimeElasticityService.getElasticityAnalysis();
+    return res.json({ success: true, data: result });
+  } catch (err: any) {
+    return res.status(500).json({ success: false, error: { code: 'ELASTICITY_ANALYSIS_ERROR', message: err.message } });
+  }
+});
+
+// POST /api/v1/forecasts/econometric/simulate-modal-shift - Dr. Sapovadia Modal Arbitrage Sensitivity Simulator
+router.post('/econometric/simulate-modal-shift', authenticateToken, async (req: Request, res: Response) => {
+  try {
+    const result = MaritimeElasticityService.simulateModalShift(req.body);
+    return res.json({ success: true, data: result });
+  } catch (err: any) {
+    return res.status(500).json({ success: false, error: { code: 'MODAL_SHIFT_SIM_ERROR', message: err.message } });
+  }
+});
 
 // GET /api/v1/forecasts/:id - Get specific forecast run with prediction curves
 router.get('/:id', authenticateToken, async (req: Request, res: Response) => {

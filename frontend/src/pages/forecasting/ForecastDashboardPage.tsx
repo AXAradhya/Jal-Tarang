@@ -1,4 +1,6 @@
 import { MarketEntryTimingWidget } from '../../components/forecasting/MarketEntryTimingWidget';
+import { MdpiDecompositionPanel } from '../../components/forecasting/MdpiDecompositionPanel';
+import { MaritimeElasticityWidget } from '../../components/forecasting/MaritimeElasticityWidget';
 import React, { useState, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import {
@@ -97,7 +99,7 @@ export const ForecastDashboardPage: React.FC = () => {
 
   const [selectedCode, setSelectedCode] = useState<string>('');
   const [horizon, setHorizon] = useState(String(settings?.defaultForecastHorizon || '30'));
-  const [activeTab, setActiveTab] = useState<'FORECAST' | 'MODELS'>('FORECAST');
+  const [activeTab, setActiveTab] = useState<'FORECAST' | 'MODELS' | 'MDPI_DECOMPOSITION' | 'ELASTICITY_ANALYSIS'>('FORECAST');
   const [retrainMsg, setRetrainMsg] = useState<string | null>(null);
   const [isRetraining, setIsRetraining] = useState(false);
 
@@ -503,6 +505,8 @@ export const ForecastDashboardPage: React.FC = () => {
         <div className="flex items-center gap-1 border border-border rounded-md p-0.5 bg-muted/40">
           {[
             { id: 'FORECAST', label: 'Forward Curve' },
+            { id: 'MDPI_DECOMPOSITION', label: 'MDPI 2024 Decomposition (SVMD)' },
+            { id: 'ELASTICITY_ANALYSIS', label: 'Maritime Elasticity (GMU)' },
             { id: 'MODELS', label: 'Model Registry' },
           ].map((tab) => (
             <button
@@ -847,6 +851,19 @@ export const ForecastDashboardPage: React.FC = () => {
             caption="SAIL Enterprise ML Model Registry & Performance Metrics"
           />
         </div>
+      )}
+
+      {/* TAB 3: MDPI 2024 DECOMPOSITION-ENSEMBLE */}
+      {activeTab === 'MDPI_DECOMPOSITION' && (
+        <MdpiDecompositionPanel
+          selectedFreightCode={selectedCode || 'FRT-C5TC'}
+          baseRateUsd={activeFreight.baseRate > 0 ? activeFreight.baseRate : 14.85}
+        />
+      )}
+
+      {/* TAB 4: MARITIME DEMAND ELASTICITY & MODAL SUBSTITUTION */}
+      {activeTab === 'ELASTICITY_ANALYSIS' && (
+        <MaritimeElasticityWidget />
       )}
         </>
       )}

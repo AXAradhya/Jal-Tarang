@@ -26,9 +26,23 @@ function sanitizeInput(val: any): any {
  */
 export const inputValidator = (req: Request, res: Response, next: NextFunction): void => {
   // 1. Sanitize null-bytes on query, params, body
-  if (req.body) req.body = sanitizeInput(req.body);
-  if (req.query) req.query = sanitizeInput(req.query) as any;
-  if (req.params) req.params = sanitizeInput(req.params);
+  try {
+    if (req.body && typeof req.body === 'object') {
+      req.body = sanitizeInput(req.body);
+    }
+    if (req.query && typeof req.query === 'object') {
+      for (const [k, v] of Object.entries(req.query)) {
+        (req.query as any)[k] = sanitizeInput(v);
+      }
+    }
+    if (req.params && typeof req.params === 'object') {
+      for (const [k, v] of Object.entries(req.params)) {
+        (req.params as any)[k] = sanitizeInput(v);
+      }
+    }
+  } catch {
+    // Graceful fallback if properties are read-only
+  }
 
   // 2. Validate payload size and field lengths
   if (req.body && typeof req.body === 'object') {
